@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    font-size: 16px;
+}
+
+.title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.title::after {
+    content: "";
+    width: 30%;
+    height: 3px; /* Độ dày của đường kẻ */
+    display: block;
+    background-image: linear-gradient(to right, #317923, #FDCE26); /* Gradient từ xanh lá sang vàng */
+}
+
+
+
+
+.section {
+    margin-bottom: 5rem;
+}
+
+/* Header */
+header {
+    margin-bottom: 1rem;
+}
+.mynav .navbar-brand{
+    margin-left: 5rem;
+    margin-right: 2rem;
+}
+.mynav .mynav__logo {
+    width: 180px;
+    height: 50px;
+}
+
+.mynav .mynav__menu{
+    margin-right: 3rem;
+}
+
+.mynav .mynav__menu li{
+    margin-right: 1rem;
+    font-weight: 700;
+}
+
+.mynav .mynav__search {
+    border: 2px solid #000;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+    gap: 0.5rem;
+    margin-right: 3rem;
+}
+
+.mynav .mynav__search input {
+    border: none;
+    background-color: transparent;
+    width: 15rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.mynav .mynav__search input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Loại bỏ hiệu ứng autofill */
+.mynav .mynav__search input:-webkit-autofill,
+.mynav .mynav__search input:-webkit-autofill:hover, 
+.mynav .mynav__search input:-webkit-autofill:focus, 
+.mynav .mynav__search input:-webkit-autofill:active {
+    background-color: transparent !important;
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+    box-shadow: 0 0 0px 1000px transparent inset !important;
+    transition: background-color 9999s ease-in-out 0s;
+    color: #000 !important;
+}
+
+
+.mynav .mynav__search-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #317923;
+    color: #fff;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    text-decoration: none;
+}
+.mynav .mynav__search a:hover {
+    color: #000; 
+}
+
+.mynav .mynav__search-icon i {
+    font-size: 1rem;
+}
+
+/* #317923
+#FDCE26
+ */
+
+ .mynav .other {
+    font-weight: 700;
+    align-items: center;
+ }
+ .mynav .other a{
+    margin-right: 2rem;
+ }
+ .mynav .other .icon{
+    background-color: #317923;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%; 
+    border: 1px solid #317923;
+    color: #fff;
+    transition: all .5s;
+    padding: 1.2rem;
+    cursor: pointer;
+ }
+ .mynav .other .icon:hover{
+    background-color: white;
+    color: #317923;
+    
+ }
+ .mynav a {
+    transition: color 0.3s ease-in-out;
+ }
+ .mynav a:hover {
+    color:#317923;
+ }
+ .mynav__menu .nav-link.active {
+    color: #317923; /* Đổi sang màu cam hoặc màu bạn thích */
+}
+
+/* User */
+
+
+.user__row .col-3 {
+    margin-right: 1rem;
+    padding-right: 1rem;
+    border-right: 1px solid #dee2e6;
+}
+.user .user__information {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user .user__information h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.user__avatar {
+    background-color: #c7c8c8;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+/* Footer */
+
+.footer {
+    padding: 20px 0;
+    color: black;
+}
+
+
+
+
+
+.footer__col h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.footer__col img {
+    width: 180px;
+    height: 40px;
+    margin-bottom: 1rem;
+}
+.footer__col p {
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.footer__col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__col ul li {
+    margin-bottom: 5px;
+}
+
+.footer__col ul li a {
+    text-decoration: none;
+    color: black;
+    transition: all .5s;
+}
+
+.footer__col ul li a:hover {
+    color: #317923;
+}
+
+/* Mạng xã hội */
+.footer__social {
+    margin-top: 10px;
+}
+
+.footer__social a {
+    font-size: 30px;
+    margin-right: 10px;
+    color: black;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+.footer__social a:hover {
+    color: #317923;
+}
+
+
