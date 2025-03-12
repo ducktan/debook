@@ -25,7 +25,8 @@
                 <div class="signup-content row">
                     <div class="signup-image col-5">
                         <figure><img src="IMG/signin-image.jpg" class="img-fluid" alt="sing up image"></figure>
-                        <a href="./signup.html" class="signup-image-link">Create a account</a>
+                        <a href="./signup.html" class="signup-image-link" style="margin-right: 2rem;">Create a account</a>
+                        <a href="./signup.html" class="signup-image-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Forgot password</a>
                     </div>
                     <div class="signup-form col-7">
                         <h2 class="form-title">Login</h2>
@@ -66,6 +67,27 @@
            
         </div>
     </section>
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Quên mật khẩu</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>Vui lòng nhập email của bạn để lấy lại mật khẩu</p>
+            <input type="email" class="form-control" placeholder="Email">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger">Xác nhận</button>
+        </div>
+      </div>
+    </div>
+  </div>
   
   
 

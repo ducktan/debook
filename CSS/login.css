@@ -109,3 +109,12 @@
     font-size: 1.5rem;
     color: white;
 }
+
+.modal-body {
+  width:80%;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+.modal-body p{
+  margin-bottom: 1rem;
+}
