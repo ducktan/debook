@@ -1,3 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    font-size: 16px;
+}
+
+.title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.title::after {
+    content: "";
+    width: 30%;
+    height: 3px; /* Độ dày của đường kẻ */
+    display: block;
+    background-image: linear-gradient(to right, #317923, #FDCE26); /* Gradient từ xanh lá sang vàng */
+}
+
+
+
+
+.section {
+    margin-bottom: 5rem;
+}
+
 /* Header */
 header {
     margin-bottom: 1rem;
@@ -7,8 +37,8 @@ header {
     margin-right: 2rem;
 }
 .mynav .mynav__logo {
-    width: 180px;
-    height: 50px;
+    width: 200px;
+    height: auto;
 }
 
 .mynav .mynav__menu{
@@ -43,6 +73,19 @@ header {
     box-shadow: none;
 }
 
+/* Loại bỏ hiệu ứng autofill */
+.mynav .mynav__search input:-webkit-autofill,
+.mynav .mynav__search input:-webkit-autofill:hover, 
+.mynav .mynav__search input:-webkit-autofill:focus, 
+.mynav .mynav__search input:-webkit-autofill:active {
+    background-color: transparent !important;
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+    box-shadow: 0 0 0px 1000px transparent inset !important;
+    transition: background-color 9999s ease-in-out 0s;
+    color: #000 !important;
+}
+
+
 .mynav .mynav__search-icon {
     display: flex;
     align-items: center;
@@ -58,14 +101,22 @@ header {
     color: #000; 
 }
 
-.mynav .other {
+.mynav .mynav__search-icon i {
+    font-size: 1rem;
+}
+
+/* #317923
+#FDCE26
+ */
+
+ .mynav .other {
     font-weight: 700;
     align-items: center;
-}
-.mynav .other a{
+ }
+ .mynav .other a{
     margin-right: 2rem;
-}
-.mynav .other .icon{
+ }
+ .mynav .other .icon{
     background-color: #317923;
     display: flex;
     align-items: center;
@@ -78,22 +129,24 @@ header {
     transition: all .5s;
     padding: 1.2rem;
     cursor: pointer;
-}
-.mynav .other .icon:hover{
+ }
+ .mynav .other .icon:hover{
     background-color: white;
     color: #317923;
-}
-
-/* Phần thân */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
+    
+ }
+ .mynav a {
+    transition: color 0.3s ease-in-out;
+ }
+ .mynav a:hover {
+    color:#317923;
+ }
+ .mynav__menu .nav-link.active {
+    color: #317923; /* Đổi sang màu cam hoặc màu bạn thích */
 }
 
 .container {
-    max-width: 1200px; /* Giới hạn chiều rộng tối đa */
+    max-width: 1400px; /* Giới hạn chiều rộng tối đa */
     margin: 0 auto; /* Căn giữa container */
     padding: 0 25px; /* Cách hai bên lề 25px */
     display: flex; /* Sử dụng Flexbox để sắp xếp cột bộ lọc và danh sách sản phẩm */
