@@ -66,6 +66,7 @@ html, body {
     display: none;
 }
 
+
 /* Điều chỉnh bố cục */
 .text-center.mb-4 {
     color: #317923;
@@ -73,6 +74,7 @@ html, body {
 
 .col-md-4 {
     margin-bottom: 1rem; /* Khoảng cách giữa các div */
+    
 }
 
 /* Header và Footer giữ nguyên */
@@ -92,7 +94,7 @@ html, body {
 
 .mynav .mynav__menu li {
     margin-right: 1rem;
-    font-weight: 700;
+    font-weight: 700px;
 }
 
 .mynav .mynav__search {
@@ -236,6 +238,7 @@ html, body {
     margin-right: 2px;
 }
 
-.views i {
-    margin-right: 5px;
+.container {
+    max-width: 90%; /* Chiếm 90% chiều rộng màn hình */
+    margin: 0 auto; /* Căn giữa container */
 }
