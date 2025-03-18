@@ -397,4 +397,9 @@ header {
     color: #317923;
 }
 
-
+/* Responsive */
+@media screen and (max-width: 1472px) {
+    .mynav .mynav__search input {
+        width: 10rem;
+    }
+}
