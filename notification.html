@@ -71,61 +71,77 @@
      </header>
 <!-- Notification Section -->
 <section class="notification-section">
-    <div class="container container-noti">
-        <div class="notification-list">
-            <h1 class="title text-success">Thông báo</h1>
-            <div class="notification-item">
-                <a href="#">Kết quả DKHP (đợt 2) và Thời khóa biểu học kỳ 2 năm học 2024-2025_Chương trình chuẩn</a>
-                <div class="date">T2, 13/01/2025 - 14:34</div>
-                <p></p>
-                <button class="btn-more">Xem thêm</button>
-                <button class="btn-print"><i class="fas fa-print"></i></button>
-            </div>
-            <div class="notification-item">
-                <a href="#">Kết quả DKHP (đợt 1) học kỳ 2 năm học 2024-2025</a>
-                <div class="date">T2, 06/01/2025 - 09:56</div>
-                <p>Chào các bạn sinh viên!</p>
-                <button class="btn-more">Xem thêm</button>
-                <button class="btn-print"><i class="fas fa-print"></i></button>
-            </div>
-            <div class="notification-item">
-                <a href="#">Thông báo học phí học kỳ 2, năm học 2024-2025</a>
-                <div class="date">T6, 27/12/2024 - 08:03</div>
-                <p>Phòng KHTC vừa đăng tải</p>
-                <button class="btn-more">Xem thêm</button>
-                <button class="btn-print"><i class="fas fa-print"></i></button>
-            </div>
-            <div class="notification-item">
-                <a href="#">Thông báo lịch DKHP và TKB dự kiến các lớp chính quy đại trà HK2 năm học 2024-2025</a>
-                <div class="date">T4, 25/12/2024 - 16:03</div>
-                <p>Chào các bạn sinh viên!<br>P.ĐTĐH thông báo lịch DKHP HK2 năm học 2024-2025 của SV gom 3 đợt như sau:</p>
-                <button class="btn-more">Xem thêm</button>
-                <button class="btn-print"><i class="fas fa-print"></i></button>
-            </div>
-            <div class="notification-item">
-                <a href="#">Thông báo khảo sát ý kiến SV về hoạt động giảng dạy của GV HK1 - NH 2024-2025</a>
-                <div class="date"></div>
-                <p></p>
-                <button class="btn-more">Xem thêm</button>
-                <button class="btn-print"><i class="fas fa-print"></i></button>
-            </div>
-            <!-- Pagination -->
-            <div class="pagination">
-                <a href="#" class="page-link">1</a>
-                <a href="#" class="page-link">2</a>
-                <a href="#" class="page-link">3</a>
-                <a href="#" class="page-link">4</a>
-                <a href="#" class="page-link">5</a>
-                <a href="#" class="page-link">6</a>
-                <a href="#" class="page-link">7</a>
-                <a href="#" class="page-link">8</a>
-                <a href="#" class="page-link">9</a>
-                <span class="page-ellipsis">...</span>
-                <a href="#" class="page-link">Sau</a>
-                <a href="#" class="page-link">Cuối</a>
-            </div>
-        </div>
-    </div>
+  <div class="container">
+      <div class="notification-panel">
+          <h2 class="notification-title">Thông báo</h2>
+          <p class="notification-subtitle">Cập nhật các thông báo mới nhất của bạn</p>
+          <div class="notification-tabs">
+              <button class="tab active" data-tab="all">Tất cả <span class="badge">6</span></button>
+              <button class="tab" data-tab="payments">Thanh toán</button>
+              <a href="#" class="mark-all-read"><i class="fas fa-check"></i>&nbsp Đánh dấu tất cả đã đọc </a>
+          </div>
+          <div class="notification-content">
+              <h3>Hôm nay</h3>
+              <div class="notification-item unread">
+                  <img src="https://via.placeholder.com/40" alt="User" class="notification-avatar">
+                  <div class="notification-details">
+                      <p>Nguyễn Thị Lan đã đặt sách "Đắc Nhân Tâm" với tác giả Nguyễn Văn A vào</p>
+                      <span class="notification-meta">Đơn hàng mới - 12/03/2025 @ 14:00.</span>
+                  </div>
+              </div>
+              <div class="notification-item unread">
+                  <img src="https://via.placeholder.com/40" alt="User" class="notification-avatar">
+                  <div class="notification-details">
+                      <p>Trần Văn Hùng đã đổi lịch đọc sách "Sapiens" sang...</p>
+                      <span class="notification-meta">Đã điều chỉnh - 14/03/2025 @ 16:45.</span>
+                  </div>
+              </div>
+              <div class="notification-item unread">
+                  <img src="https://via.placeholder.com/40" alt="User" class="notification-avatar">
+                  <div class="notification-details">
+                      <p>Lê Thị Mai đã đăng ký đọc sách mới "Nhà Giả Kim" với danh mục sách.</p>
+                      <span class="notification-meta">Đăng ký sách mới - 12/03/2025 @ 10:00.</span>
+                  </div>
+              </div>
+              <div class="notification-item">
+                  <i class="fa fa-clock notification-icon" style="color: #f4a261;"></i>
+                  <div class="notification-details">
+                      <p>Nhà xuất bản đã cập nhật lịch phát hành sách cho tuần này.</p>
+                      <span class="notification-meta">Nhắc nhở lịch - 12/03/2025 @ 15:00.</span>
+                  </div>
+              </div>
+              <div class="notification-item">
+                  <img src="https://via.placeholder.com/40" alt="User" class="notification-avatar">
+                  <div class="notification-details">
+                      <p>Phạm Thị Hồng đã đánh giá sách "Harry Potter" 5 sao...</p>
+                      <span class="notification-meta">Đánh giá mới - 12/03/2025 @ 09:00.</span>
+                  </div>
+              </div>
+              <h3>Hôm qua</h3>
+              <div class="notification-item">
+                  <img src="https://via.placeholder.com/40" alt="User" class="notification-avatar">
+                  <div class="notification-details">
+                      <p>Hoàng Thị Ngọc đã đặt sách "Totto-chan" với tác giả Trần Văn B vào</p>
+                      <span class="notification-meta">Đơn hàng mới - 12/03/2025 @ 09:00.</span>
+                  </div>
+              </div>
+              <div class="notification-item">
+                  <img src="https://via.placeholder.com/40" alt="User" class="notification-avatar">
+                  <div class="notification-details">
+                      <p>Đỗ Văn Nam đã đặt lịch đọc "Đừng Bao Giờ Đi Ăn Một Mình" với tác giả Lê Văn C vào</p>
+                      <span class="notification-meta">Đơn hàng mới - 12/03/2025 @ 10:00.</span>
+                  </div>
+              </div>
+              <div class="notification-item">
+                  <img src="https://via.placeholder.com/40" alt="User" class="notification-avatar">
+                  <div class="notification-details">
+                      <p>Vũ Thị Linh đã đặt sách "Nhật Ký Trong Tù" với tác giả Nguyễn Văn D vào</p>
+                      <span class="notification-meta">Đơn hàng mới - 12/03/2025 @ 15:00.</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 </section>
     <!-- Footer -->
     <footer class="footer">
