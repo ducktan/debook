@@ -21,7 +21,10 @@ html,body{
     background-image: linear-gradient(to right, #317923, #FDCE26); /* Gradient từ xanh lá sang vàng */
 }
 
-
+a {
+    text-decoration: none;
+    color: black;
+}
 
 
 .section {
@@ -29,127 +32,89 @@ html,body{
 }
 
 /* Header */
-header {
-    margin-bottom: 1rem;
-}
-.mynav .navbar-brand{
-    margin-left: 5rem;
-    margin-right: 2rem;
-}
-.mynav .mynav__logo {
-    width: 200px;
-    height: auto;
+header{
+    position: absolute;
+    top:20px;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 2;
 }
 
-.mynav .mynav__menu{
-    margin-right: 3rem;
-}
-
-.mynav .mynav__menu li{
-    margin-right: 1rem;
-    font-weight: 700;
-}
-
-.mynav .mynav__search {
-    border: 2px solid #000;
-    border-radius: 50px;
+.login__header {
+   
+    text-align: right;
     display: flex;
     align-items: center;
-    padding: 0 0.5rem;
-    gap: 0.5rem;
-    margin-right: 3rem;
+    justify-content: end;
 }
-
-.mynav .mynav__search input {
-    border: none;
-    background-color: transparent;
-    width: 15rem;
+.login__header a {
     font-size: 1rem;
-    padding: 0.5rem;
-}
-
-.mynav .mynav__search input:focus {
-    outline: none;
-    box-shadow: none;
-}
-
-/* Loại bỏ hiệu ứng autofill */
-.mynav .mynav__search input:-webkit-autofill,
-.mynav .mynav__search input:-webkit-autofill:hover, 
-.mynav .mynav__search input:-webkit-autofill:focus, 
-.mynav .mynav__search input:-webkit-autofill:active {
-    background-color: transparent !important;
-    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
-    box-shadow: 0 0 0px 1000px transparent inset !important;
-    transition: background-color 9999s ease-in-out 0s;
-    color: #000 !important;
-}
-
-
-.mynav .mynav__search-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #317923;
-    color: #fff;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
+    font-weight: 500;
+    margin: 1rem;
     text-decoration: none;
+    color: #317923; /* Màu mặc định */
+    background: linear-gradient(90deg, #317923, #FDCE26);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 0.5s ease-in-out;
+    background-size: 200% 100%;
+    background-position: left;
 }
-.mynav .mynav__search a:hover {
-    color: #000; 
+.login__header a:hover {
+    background-position: right;
 }
 
-.mynav .mynav__search-icon i {
-    font-size: 1rem;
+
+header p{
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
 }
 
-/* #317923
-#FDCE26
- */
 
- .mynav .other {
-    font-weight: 700;
-    align-items: center;
- }
- .mynav .other a{
-    margin-right: 2rem;
- }
- .mynav .other .icon{
-    background-color: #317923;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%; 
-    border: 1px solid #317923;
-    color: #fff;
+header p span {
+    border-right: 1px solid black;
+    padding-right: 0.5rem;
+}
+#debookNavBar .navbar-nav {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+#debookNavBar .navbar-nav .nav-link{
+    color: black;
+    letter-spacing: 3px;
+    line-height: 0.8em;
+    padding: 20px 24px;
+}
+#debookNavBar .navbar-nav .nav-item::after{
+    content: "";
+    display: block;
+    width: 0%;
+    height: 3px;
+    background-image: linear-gradient(to right, #317923, #FDCE26);
     transition: all .5s;
-    padding: 1.2rem;
-    cursor: pointer;
- }
- .mynav .other .icon:hover{
-    background-color: white;
-    color: #317923;
-    
- }
- .mynav a {
-    transition: color 0.3s ease-in-out;
- }
- .mynav a:hover {
-    color:#317923;
- }
- .mynav__menu .nav-link.active {
-    color: #317923; /* Đổi sang màu cam hoặc màu bạn thích */
 }
+#debookNavBar .navbar-nav .nav-item:hover::after{
+    width: 100%;
+}
+
 
 /* Banner */
+/* CAROUSEL */
 
-.banner {
-    padding: 0;
+.debookCarousel__overlay{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgb(255, 255, 255),transparent);
 }
+
+.debookCarousel img {
+    height: 550px;
+}
+
 
 
 /* Category */
@@ -398,8 +363,25 @@ header {
 }
 
 /* Responsive */
-@media screen and (max-width: 1472px) {
-    .mynav .mynav__search input {
-        width: 10rem;
+@media screen and (max-width: 768px) {
+    .mynav .navbar-brand{
+        margin: 0;
+    }
+    .mynav .other {
+        display: block;
+    }
+    header #myform {
+        display: none!important;
+    }
+}
+@media screen and (max-width: 768px) {
+    .mynav .navbar-brand{
+        margin: 0;
+    }
+    .mynav .other {
+        display: block;
+    }
+    header #myform {
+        display: none!important;
     }
 }
