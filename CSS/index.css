@@ -31,135 +31,13 @@ a {
     margin-bottom: 5rem;
 }
 
+.my-btn {
+    background-color: #317923;
+    padding: 5px 20px;
+}
+
 /* Header */
-header {
-    margin-bottom: 1rem;
-}
-.mynav .navbar-brand{
-    margin-left: 5rem;
-    margin-right: 2rem;
-}
-.mynav .mynav__logo {
-    width: 180px;
-    height: 50px;
-}
 
-.mynav .mynav__menu{
-    margin-right: 3rem;
-}
-
-.mynav .mynav__menu li{
-    margin-right: 1rem;
-    font-weight: 500;
-}
-.mynav .mynav__menu li::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    display: block;
-    background-image: linear-gradient(to right, #317923, #FDCE26);
-    transition: all .5s;
-}
-.mynav .mynav__menu li:hover:after{
-    
-    width: 100%;
-   
-}
-
-.mynav .mynav__search {
-    border: 1px solid #6c757d;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    padding: 0 0.5rem;
-    gap: 0.5rem;
-    margin-right: 3rem;
-}
-
-.mynav .mynav__search input {
-    border: none;
-    background-color: transparent;
-    width: 15rem;
-    font-size: 1rem;
-    padding: 0.5rem;
-}
-
-.mynav .mynav__search input:focus {
-    outline: none;
-    box-shadow: none;
-}
-
-/* Loại bỏ hiệu ứng autofill */
-.mynav .mynav__search input:-webkit-autofill,
-.mynav .mynav__search input:-webkit-autofill:hover, 
-.mynav .mynav__search input:-webkit-autofill:focus, 
-.mynav .mynav__search input:-webkit-autofill:active {
-    background-color: transparent !important;
-    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
-    box-shadow: 0 0 0px 1000px transparent inset !important;
-    transition: background-color 9999s ease-in-out 0s;
-    color: #000 !important;
-}
-
-
-.mynav .mynav__search-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #317923;
-    color: #fff;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    text-decoration: none;
-}
-.mynav .mynav__search a:hover {
-    color: #000; 
-}
-
-.mynav .mynav__search-icon i {
-    font-size: 1rem;
-}
-
-/* #317923
-#FDCE26
- */
-
- .mynav .other {
-    font-weight: 500;
-    align-items: center;
- }
- .mynav .other a{
-    margin-right: 2rem;
- }
- .mynav .other .icon{
-    background-color: #317923;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%; 
-    border: 1px solid #317923;
-    color: #fff;
-    transition: all .5s;
-    padding: 1.2rem;
-    cursor: pointer;
- }
- .mynav .other .icon:hover{
-    background-color: white;
-    color: #317923;
-    
- }
- .mynav a {
-    transition: color 0.3s ease-in-out;
- }
- .mynav a:hover {
-    color:#317923;
- }
- .mynav__menu .nav-link.active {
-    color: #317923; /* Đổi sang màu cam hoặc màu bạn thích */
-}
 
 
 /* Banner */
@@ -416,25 +294,36 @@ header {
 }
 
 /* Responsive */
-@media screen and (max-width: 768px) {
-    .mynav .navbar-brand{
-        margin: 0;
-    }
-    .mynav .other {
-        display: block;
-    }
-    header #myform {
-        display: none!important;
+@media (max-width: 1199.98px) {
+    #myform {
+        display: none !important;
     }
 }
-@media screen and (max-width: 768px) {
-    .mynav .navbar-brand{
-        margin: 0;
+
+@media (max-width: 991px) {
+    #myform {
+        display: block !important;
     }
-    .mynav .other {
-        display: block;
+    .navbar-nav {
+        text-align: center;
     }
-    header #myform {
-        display: none!important;
+    .nav-link {
+        padding: 0.5rem 1rem;
+    }
+    .auth-buttons {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    .form-control {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand img {
+        width: 120px;
+    }
+    .btn {
+        width: 100%;
     }
 }
