@@ -1,8 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 html,body{
     font-size: 16px;
@@ -399,334 +395,196 @@ header {
 
 
 
-/*  */
 
-/* Reset CSS */
+/* bắt đầu file css */
 
-
-/*body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-    */
-
-/* Podcast Container */
 .podcast-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.podcast-header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
-    padding: 40px;
-    border-radius: 15px;
-    width: 100%;
-    max-width: 1500px;
-    position: relative;
+    gap: 20px;
 }
 
-/* Left Content */
-.content {
-    flex: 1;
-    max-width: 50%;
-}
-
-.title {
-    font-size: 48px;
-    font-weight: bold;
-}
-
-.category-btn {
-    background: rgba(255, 255, 255, 0.1);
-    color: rgb(0, 0, 0);
-    border: none;
-    padding: 10px 20px;
-    font-size: 14px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.suggestion {
-    background-color: #16b60d;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-.podcast-title {
-    font-size: 30px;
-    margin-top: 10px;
-}
-
-.description {
-    font-size: 16px;
-    color: #aaa;
-    margin-top: 10px;
-    max-width: 450px;
-}
-
-.buttons {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.play-btn {
-    background-color: #00C853;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 30px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.play-btn:hover {
-    background-color: #009624;
-}
-
-.like-btn {
-    background: transparent;
-    border: none;
-    font-size: 24px;
-    color: white;
-    margin-left: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.like-btn:hover {
-    color: #ff4081;
-}
-
-/* Right Image */
 .podcast-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    width: 140px;
 }
 
 .podcast-image img {
-    width: 250px;
-    border-radius: 50%;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    width: 100%;
+    border-radius: 16px;
 }
 
-
-
-/* slider*/
-.container {
-    display: flex;
-    /*align-items: center;*/
-    justify-content: space-between;
-    max-width: 1500px;
-   margin:auto; 
-    padding: 20px;
-    /*height: 200px;*/
-    position: relative; 
-}
-
-.podcast-content {
-    max-width: 50%;
-    transition: opacity 0.5s ease-in-out;
-    /*margin-top: 50px;*/
-}
-
-.slider {
-    position: relative;
-    max-width: 300px;
-    margin: auto;
-    overflow: hidden;
-   
-}
-
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    box-shadow: none !important; /* Đảm bảo không có bóng trên từng slide */
-}
-
-.slide {
-    min-width: 100%;
-    display: flex;
-    justify-content: center;
-    box-shadow: none !important; /* Đảm bảo không có bóng trên từng slide */
-}
-
-.slide img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-button {
+.shadow {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    width: 100%;
+    height: 10px;
     background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+    bottom: -5px;
+    left: 0;
     border-radius: 50%;
+    filter: blur(5px);
 }
 
-.prev {
-    left: 10px;
+.podcast-info {
+    flex: 1;
 }
 
-.next {
-    right: 10px;
-}
-.podcast-header {
-    display: flex;
-    align-items: center; /* Căn giữa theo chiều dọc */
-    gap: 10px; /* Khoảng cách giữa tiêu đề và dropdown */
-}
-.styled-select {
-    font-size: 16px;
-    padding: 12px 10px;
-    min-width: 200px;
-    border: none;
-    border-radius: 25px;
-    background: linear-gradient(135deg, #4CAF50, #2E7D32);
-    color: white;
-    cursor: pointer;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    outline: none;
-    transition: all 0.3s ease;
-    appearance: none;
-   /* text-align: ;*/
-}
-
-.styled-select:hover {
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(135deg, #4f9452, #388E3C);
-}
-
-.styled-select:focus {
-    border: 2px solid #66BB6A;
-    box-shadow: 0px 0px 15px rgba(102, 187, 106, 0.8);
-}
-
-.select-wrapper {
-    position: relative;
-    display: inline-block;
-}
-
-/* Mũi tên custom */
-.select-wrapper::after {
-    content: "▼";
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
+.rating {
     font-size: 14px;
+    margin: 5px 0;
+}
+
+.trending {
+    margin: 5px 0;
+}
+
+.badge {
+    background-color: red;
     color: white;
-    pointer-events: none;
-}
-
-/* Hiệu ứng khi hover */
-.podcast-header select:hover {
-    background-color: #f1f1f1;
-}
-
-/* Hiệu ứng khi click */
-.podcast-header select:focus {
-    border-color: #2E7D32;
-    outline: none;
-}
-.suggest-tag {
-    background-color: #444;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 3px 8px;
+    border-radius: 12px;
     font-size: 12px;
-    margin-top: 30px;
-
 }
 
-
-
-/*phần hiện ảnh theo line*/
-
-.podcast-section {
-    padding: 20px;
+.actions {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
 }
-.podcast-section h2 {
-    font-size: 24px;
+
+.follow-btn {
+    background-color: #1DB954;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.follow-btn i {
+    font-size: 14px;
+}
+
+.share-btn {
+    background-color: #2a2a2a;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.description {
+    margin: 10px 0;
+    color: #1b1b1b;
+}
+
+.see-more {
+    color: #1DB954;
+    text-decoration: none;
+}
+
+.episode-list {
+    margin-top: 20px;
+}
+
+.episode {
+    display: flex;
+    background-color:#b1ba78bc; /* màu nền của gói*/
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
     margin-bottom: 10px;
 }
-.podcast-list {
+
+.episode-image {
+    width: 60px;
+}
+
+.episode-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.episode-info {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.episode-info h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.episode-info p {
+    margin: 3px 0;
+    font-size: 13px;
+    color: black ;
+}
+
+
+
+.episode-stats {
     display: flex;
-    gap: 20px;
-    overflow-x: auto; /* Cuộn ngang khi nhiều ảnh */
-    padding-bottom: 10px;
-    scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
-}
-.podcast-list::-webkit-scrollbar {
-    display: none; /* Ẩn thanh cuộn trên Chrome/Safari */
-}
-.podcast-item {
-    flex: 0 0 auto;
-    width: 200px; /* Điều chỉnh kích thước ảnh */
-    text-align: center;
-    margin-right: 30px;
-}
-.podcast-item img {
-    width: 100%;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-
-}
-.podcast-item img:hover {
-    transform: scale(1.05);
-}
-.podcast-item p {
-    margin-top: 5px;
+    align-items: center;
+    gap: 10px; /* Tạo khoảng cách giữa icon và nút */
     font-size: 14px;
+    color: #1DB954;
 }
-.podcast-item .description {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.7);
+
+.play-button {
+    background:#43b2b4 ; /* Màu cam nổi bật */
     color: white;
-    font-size: 14px;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    border-radius: 0 0 10px 10px;
-} 
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
 
-.podcast-item:hover .description {
-    opacity: 1;
-    transform: translateY(0);
+.play-button:hover {
+    background: #3e7240; /* Màu tối hơn khi hover */
+}
+
+/* xem thêm */
+.description p {
+    max-height: 50px; /* Giới hạn chiều cao */
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.description.expanded p {
+    max-height: 500px; /* Mở rộng khi nhấn */
 }
 
 
-.label {
+/* phần play podcast */
 
-    background-color: #4a4a4a; /* Màu xám đậm */
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
-    padding: 6px 12px;
-    border-radius: 16px; /* Bo góc giống ảnh */
-    text-transform: uppercase;
-    position: absolute;
-    top: -10px; /* Điều chỉnh vị trí lên trên container */
-    left: 10px;
-  
-    
+.audio-player { display: flex; align-items: center; background-color:#7e935f; padding: 10px 20px; border-radius: 12px; width: 100%; max-width: 1000px; gap: 15px; color: white;
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 1000;
+    display: none; /* Ẩn thanh phát nhạc ban đầu */
 }
+.track-info { display: flex; align-items: center; gap: 10px; max-width: 250px; }
+.track-cover { width: 48px; height: 48px; border-radius: 12px; }
+.track-title { font-size: 14px; font-weight: bold; white-space: nowrap;  text-overflow: ellipsis; }
+.track-artist { font-size: 12px; color: #ccc; white-space: nowrap; text-overflow: ellipsis; }
+.controls { display: flex; align-items: center; gap: 8px; flex: 1; }
+.icon-btn { background: none; border: none; color: white; cursor: pointer; font-size: 18px; }
+.progress-bar { display: flex; align-items: center; gap: 5px; flex: 0.75;overflow: initial; }
+#seekBar { width: 60%; height: 4px; border-radius: 5px; background: #555; appearance: none; cursor: pointer; }
+#seekBar::-webkit-slider-thumb { appearance: none; width: 10px; height: 10px; background: white; border-radius: 50%; cursor: pointer; }
+#currentTime, #duration { font-size: 12px; color: #bbb; }
+.inline-controls { display: flex; align-items: center; gap: 10px; }
+#volume { width: 80px; }
+.right-icons { display: flex; align-items: center; gap: 10px; }
