@@ -19,56 +19,58 @@
 </head>
 <body>
     
-    <!-- Header -->
-     <header>
-      <nav class="navbar navbar-expand-lg mynav">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="./IMG/Logo.png" alt="logo" class="img-fluid mynav__logo">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mb-2 mb-lg-0 mynav__menu">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sách điện tử</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sách nói</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Podcast</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
-              </li>
-            </ul>
-
-
-            <form class="d-flex mynav__search" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <a href="" class="mynav__search-icon">
-                <i class="fa fa-search"></i>
-              </a>
-            </form>
-            <div class="other d-flex">
-                <a href="./login.html" class="nav-link">Đăng nhập</a>
-                <a href="./signup.html" class="nav-link">Đăng ký</a>
-
-                <div class="icon">
-                  <i class="fa fa-bell"></i>
-                </div>
+    <header class="container-fluid px-0 myheader">
+        <nav class="navbar navbar-expand-md">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./IMG/Logo.png" alt="Logo" width="150" class="img-fluid">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html"><i class="fa-solid fa-house"></i></a>
+                        </li>
+                        <li class="nav-item line">
+                            <a class="nav-link" href="./login.html">Đăng nhập</a>
+                        </li>
+                        <li class="nav-item line">
+                            <a class="nav-link" href="./signup.html">Đăng ký</a>
+                        </li>
+                       
+                    </ul>
+                    
+                    <div class="d-flex align-items-center flex-wrap gap-2 form">
+                        <form class="d-flex flex-grow-1 myform" role="search" id="myform">
+                            <input class="form-control me-2" type="search" placeholder="Search" 
+                                   aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+  
+                        <div class="icon__search">
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
             </div>
-
-          </div>
+        </nav>
+  
+        <div class="header__category container">
+          <a href="">Sách điện tử</a>
+          <a href="">Sách nói</a>
+          <a href="">Sách hội viên</a>
+          <a href="">Sách mua lẻ</a>
+          <a href="">Podcast</a>
+          <a href="">Blog</a>
         </div>
-      </nav>
-     </header>
+    </header>
          
      <!-- User Section -->
 

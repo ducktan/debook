@@ -21,6 +21,18 @@ html,body{
     background-image: linear-gradient(to right, #317923, #FDCE26); /* Gradient từ xanh lá sang vàng */
 }
 
+.line::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    display: block;
+    background-image: linear-gradient(to right, #317923, #FDCE26); /* Gradient từ xanh lá sang vàng */
+    transition: all .5s;
+}
+.line:hover::after {
+    width: 100%;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -37,8 +49,27 @@ a {
 }
 
 /* Header */
+header {
+    margin-bottom: 1rem;
+}
+.myheader .nav-link {
+    font-weight: 500;
+    margin-right: 1rem;
+    color: black;
+}
 
+.myheader .nav-link.active {
+    color: #fdc703;
+}
 
+.header__category a {
+    font-weight: 500;
+    margin-right: 1rem;
+    transition: all .5s;
+}
+.header__category a:hover {
+    color: #317923;
+}
 
 /* Banner */
 
@@ -111,12 +142,13 @@ a {
 /* Book */
 .book .card  {
     margin-right: 2rem;
+    margin-bottom: 1rem;
     
 }
 
 .book .card img {
     width: 100%;
-    height: 250px;
+    height: 200px;
     
 }
 
@@ -294,36 +326,33 @@ a {
 }
 
 /* Responsive */
-@media (max-width: 1199.98px) {
+@media (max-width: 991.98px) {
+    .icon__search {
+        display: block !important;
+    }
     #myform {
         display: none !important;
     }
 }
-
-@media (max-width: 991px) {
+@media (max-width: 767.98px) {
+    .icon__search {
+        display: none !important;
+    }
     #myform {
         display: block !important;
     }
-    .navbar-nav {
-        text-align: center;
+    #myform input{
+        margin-bottom: 1rem;
     }
-    .nav-link {
-        padding: 0.5rem 1rem;
-    }
-    .auth-buttons {
-        justify-content: center;
-        margin-top: 1rem;
-    }
-    .form-control {
-        max-width: 100%;
+    .category__item {
+        margin-bottom: 1rem;
     }
 }
-
-@media (max-width: 576px) {
-    .navbar-brand img {
-        width: 120px;
+@media (min-width: 992px) {
+    .icon__search {
+        display: none !important;
     }
-    .btn {
-        width: 100%;
+    #myform {
+        display: flex !important; /* Đảm bảo form không bị ẩn */
     }
 }
