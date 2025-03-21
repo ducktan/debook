@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gói Hội Viên</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #347928;
+            margin: 0;
+            padding: 0;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: rgba(192, 235, 166, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .pricing-options {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .pricing-card {
+            background: #347928;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;
+            min-width: 200px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .popular {
+            border: 2px solid #C0EBA6;
+            position: relative;
+        }
+        .popular::before {
+            content: "PHỔ BIẾN";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #C0EBA6;
+            color: #347928;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .price {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #C0EBA6;
+            color: #347928;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #A5D88B;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gói hội viên</h1>
+        <p>Nghe và đọc hơn 20,000 nội dung thuộc Kho sách Hội viên</p>
+        <div class="pricing-options">
+            <div class="pricing-card popular">
+                <h2>WAKA 3 THÁNG</h2>
+                <p class="price">99.000đ</p>
+                <button>Mua gói</button>
+            </div>
+            <div class="pricing-card">
+                <h2>WAKA 6 THÁNG</h2>
+                <p class="price">179.000đ</p>
+                <button>Mua gói</button>
+            </div>
+            <div class="pricing-card">
+                <h2>WAKA 12 THÁNG</h2>
+                <p class="price">329.000đ</p>
+                <button>Mua gói</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
