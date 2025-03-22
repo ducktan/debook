@@ -284,6 +284,9 @@ header {
     #myform {
         display: none !important;
     }
+    #user__tab {
+        display: none;
+    }
 }
 @media (max-width: 767.98px) {
     .icon__search {
@@ -298,13 +301,19 @@ header {
     .category__item {
         margin-bottom: 1rem;
     }
+    .user__tab__item p {
+        display: none;
+    }
 }
-@media (min-width: 992px) {
+@media (min-width: 991.98px) {
     .icon__search {
         display: none !important;
     }
     #myform {
         display: flex !important; /* Đảm bảo form không bị ẩn */
+    }
+    .user__responsive {
+        display: none;
     }
 }
 

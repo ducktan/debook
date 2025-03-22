@@ -75,8 +75,44 @@
      <!-- User Section -->
 
      <section class="user section container">
+
+        <div class="user__responsive">
+            <div class="user__information">
+                <h3>Tấn Nguyễn Đức</h3>
+                <div class="user__avatar"></div>
+            </div>
+            <div class="user__status">
+                <i class="fa-solid fa-crown"></i>
+                <p>Thành viên VIP</p>
+            </div>
+
+            <hr>
+            <div class="user__tab__item d-flex g-5">
+                <div class="user__item">
+                    <i class="fa-solid fa-user"></i>
+                    <p><a href="">Quản lý tài khoản</a></p>
+                </div>
+                <div class="user__item">
+                    <i class="fa-solid fa-book"></i>
+                    <p><a href="">Tủ sách cá nhân</a></p>
+                </div>
+                <div class="user__item">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p><a href="">Quản lý đơn hàng</a></p>
+                </div>
+                <div class="user__item">
+                    <i class="fa-solid fa-money-bill"></i>
+                    <p><a href="">Lịch sử giao dịch</a></p>
+                </div>
+                <div class="user__item">
+                    <i class="fa-solid fa-headset"></i>
+                    <p><a href="">Hỗ trợ khách hàng</a></p>
+                </div>
+            </div>
+            
+        </div>
         <div class="user__row row">
-            <div class="col-3 user__col">
+            <div class="col-xl-3 col-lg-4  user__col" id="user__tab">
                 <div class="user__information">
                     <h3>Tấn Nguyễn Đức</h3>
                     <div class="user__avatar"></div>
@@ -112,7 +148,7 @@
                     <p><a href="">Hỗ trợ khách hàng</a></p>
                 </div>
             </div>
-            <div class="col-7 user__col">
+            <div class="col-xl-7 col-lg-8 col-12 user__col">
                 <h2>Quản lý thông tin tài khoản</h2>
                 <hr>
 
@@ -169,8 +205,8 @@
                     <hr>
 
                     <div class="user__form__button d-flex">
-                        <button class="btn my-btn" style="margin-right: 1rem;">Cập nhật</button>
-                        <button class="btn my-btn">Huỷ</button>
+                        <button class="btn btn-outline-success" style="margin-right: 1rem;">Cập nhật</button>
+                        <button class="btn btn-outline-success">Huỷ</button>
                     </div>
                 </div>
 
@@ -184,51 +220,52 @@
 
 
     <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
-      <div class="container">
-          <div class="footer__row row">
-              <!-- Cột 1: Địa chỉ + Mạng xã hội -->
-              <div class="footer__col col-3">
-                <img src="./IMG/Logo.png" alt="logo">
-                  <div class="footer__social">
-                      <a href="#"><i class="fab fa-facebook"></i></a>
-                      <a href="#"><i class="fab fa-pinterest"></i></a>
-                      <a href="#"><i class="fab fa-twitter"></i></a>
-                      <a href="#"><i class="fab fa-google"></i></a>
-                  </div>
-              </div>
-  
-              <!-- Cột 2: Dịch vụ -->
-              <div class="footer__col col-3">
-                  <h5>DỊCH VỤ</h5>
-                  <ul>
-                      <li><a href="#">Điều khoản sử dụng</a></li>
-                      <li><a href="#">Chính sách bảo mật thông tin cá nhân</a></li>
-                      <li><a href="#">Chính sách bảo mật thanh toán</a></li>
-                      <li><a href="#">Giới thiệu De-book</a></li>
-                  </ul>
-              </div>
-  
-              <!-- Cột 3: Tài khoản -->
-              <div class="footer__col col-3">
-                  <h5>TÀI KHOẢN CỦA TÔI</h5>
-                  <ul>
-                      <li><a href="#">Đăng nhập/Đăng ký</a></li>
-                      <li><a href="#">Thay đổi thông tin khách hàng</a></li>
-                      <li><a href="#">Chi tiết tài khoản</a></li>
-                  </ul>
-              </div>
-  
-              <!-- Cột 4: Liên hệ -->
-              <div class="footer__col col-3">
-                  <h5>LIÊN HỆ</h5>
-                  <p>Khu phố 6, P.Linh Trung, Tp.Thủ Đức, Tp.HCM.</p>
-                  <p>cskh@debook.com.vn</p>
-                  <p>19005656</p>
-              </div>
-          </div>
-      </div>
-  </footer>
+        <div class="container">
+            <div class="footer__row row">
+                <!-- Cột 1: Địa chỉ + Mạng xã hội -->
+                <div class="footer__col col-lg-3 col-md-6 col-12">
+                  <img src="./IMG/Logo.png" alt="logo">
+                    <div class="footer__social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+    
+                <!-- Cột 2: Dịch vụ -->
+                <div class="footer__col col-lg-3 col-md-6 col-12">
+                    <h5>DỊCH VỤ</h5>
+                    <ul>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                        <li><a href="#">Chính sách bảo mật thông tin cá nhân</a></li>
+                        <li><a href="#">Chính sách bảo mật thanh toán</a></li>
+                        <li><a href="#">Giới thiệu De-book</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Cột 3: Tài khoản -->
+                <div class="footer__col col-lg-3 col-md-6 col-12">
+                    <h5>TÀI KHOẢN CỦA TÔI</h5>
+                    <ul>
+                        <li><a href="#">Đăng nhập/Đăng ký</a></li>
+                        <li><a href="#">Thay đổi thông tin khách hàng</a></li>
+                        <li><a href="#">Chi tiết tài khoản</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Cột 4: Liên hệ -->
+                <div class="footer__col col-lg-3 col-md-6 col-12">
+                    <h5>LIÊN HỆ</h5>
+                    <p>Khu phố 6, P.Linh Trung, Tp.Thủ Đức, Tp.HCM.</p>
+                    <p>cskh@debook.com.vn</p>
+                    <p>19005656</p>
+                </div>
+            </div>
+        </div>
+    </footer>
   
 
 

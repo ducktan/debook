@@ -85,3 +85,9 @@
    color: #317923;
    border: 1px solid #317923;
 }
+
+@media (max-width: 767.98px) {
+ .box  {
+  width: 100%;
+ }
+}

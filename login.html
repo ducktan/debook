@@ -23,12 +23,12 @@
         <div class="container">
             <div class="box">
                 <div class="signup-content row">
-                    <div class="signup-image col-5">
+                    <div class="signup-image col-md-5 d-none d-md-block">
                         <figure><img src="IMG/signin-image.jpg" class="img-fluid" alt="sing up image"></figure>
                         <a href="./signup.html" class="signup-image-link" style="margin-right: 2rem;">Create a account</a>
-                        <a href="./signup.html" class="signup-image-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Forgot password</a>
+                        <a href="./signup.html" class="signup-image-link" data-bs-toggle="modal" data-bs-target="#exampleModal" id="hehe">Forgot password</a>
                     </div>
-                    <div class="signup-form col-7">
+                    <div class="signup-form col-md-7 col-12">
                         <h2 class="form-title">Login</h2>
                         <form method="POST" class="register-form" id="register-form">
                             <div class="text">
@@ -52,13 +52,18 @@
                                 <input type="submit" name="signup" id="signup" class="form-submit" value="Login"/>
                             </div>
                         </form>
-                        <div class="social-login" >
-                            <span class="social-label">Or login with</span>
+                        <div class="social-login mb-5" >
+                            <span class="social-label d-none d-sm-block">Or login with</span>
                             
                                <a href="#" style="background-color: #3b5998;"><i class="fab fa-facebook-f"></i></a>
                                <a href="#" style="background-color: #1da0f2;"><i class="fab fa-twitter"></i></a>
                                 <a href="#" style="background-color: #e72734;"><i class="fab fa-google-plus-g"></i></i></a>
                             
+                        </div>
+
+                        <div class="appear d-md-none">
+                            <a href="./signup.html" class="signup-image-link" style="margin-right: 2rem;">Create a account</a>
+                        <a href="./signup.html" class="signup-image-link" data-bs-toggle="modal" data-bs-target="#exampleModal" id="hehe">Forgot password</a>
                         </div>
                     </div>
                     

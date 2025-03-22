@@ -118,3 +118,16 @@
 .modal-body p{
   margin-bottom: 1rem;
 }
+
+/* Responsive */
+@media (max-width: 1199.98px) {
+  #hehe {
+    display: block;
+  }
+}
+
+@media (min-width: 1199.98px) {
+  #hehe {
+    display: block;
+  }
+}
