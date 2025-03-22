@@ -94,14 +94,6 @@ header {
     color: #fff !important;
 }
 
-.category__item .card {
-    position: relative; /* Để lớp phủ đúng vị trí */
-    background-image: url(../IMG/bookIMG.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    overflow: hidden; /* Tránh lớp phủ tràn ra ngoài */
-}
 
 .category__item .card {
     position: relative;
