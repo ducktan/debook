@@ -72,8 +72,33 @@
          
 <!-- trang web Blog -->
 <section class="blog-section py-5">
-        <div class="container">
-        <h2 class="text-center mb-4">Blog Cộng Đồng</h2>
+    <div class="container">
+        <div class="row mb-4 align-items-center">
+            <!-- Tiêu đề Blog -->
+            <div class="col-md-3">
+                <h2 class="text-left mb-0">BLOG CỘNG ĐỒNG</h2>
+            </div>
+            <!-- Form thêm bài review -->
+            <div class="col-md-9">
+                <form id="review-form" class="d-flex flex-wrap gap-2 align-items-end border p-3 rounded">
+                    <div class="flex-grow-1">
+                        <label for="review-title" class="form-label">Tiêu đề:</label>
+                        <input type="text" class="form-control" id="review-title" placeholder="Nhập tiêu đề" required>
+                    </div>
+                    <div class="flex-grow-1">
+                        <label for="review-author" class="form-label">Tác giả:</label>
+                        <input type="text" class="form-control" id="review-author" placeholder="Nhập tên tác giả" required>
+                    </div>
+                    <div class="flex-grow-1">
+                        <label for="review-image" class="form-label">Ảnh:</label>
+                        <input type="file" class="form-control" id="review-image" accept="image/*" required>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary">Thêm</button>
+                    </div>
+                </form>
+            </div>
+        </div>
         <div class="row" id="blog-posts">
             <!-- Book Card 1 -->
             <div class="col-md-4 mb-4 blog-post">
@@ -146,7 +171,7 @@
                                     </div>
                                     <div class="views">
                                         <i class="fas fa-eye"></i> 1234 lượt xem
-                                    </div>
+                                    </div>  
                                 </div>
                             </div>
                         </div>
@@ -316,6 +341,7 @@
         </div>
     </div>
 </section>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
@@ -370,43 +396,119 @@
 
 <!-- Custom JavaScript -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const posts = document.querySelectorAll('.blog-post');
-        const loadMoreBtn = document.getElementById('load-more');
-        let visiblePosts = 6; // Hiển thị 6 bài viết ban đầu
-    
-        // Ẩn các bài viết sau 6 bài đầu tiên
+
+document.addEventListener('DOMContentLoaded', function() {
+    const posts = document.querySelectorAll('.blog-post');
+    const loadMoreBtn = document.getElementById('load-more');
+    let visiblePosts = 6; // Hiển thị 6 bài viết ban đầu
+
+    // Ẩn các bài viết sau 6 bài đầu tiên
+    posts.forEach((post, index) => {
+        if (index >= visiblePosts) {
+            post.classList.add('hidden');
+            post.style.display = 'none';
+        } else {
+            post.classList.remove('hidden');
+            post.style.display = 'block';
+        }
+    });
+
+    // Ẩn nút "Xem thêm" nếu không còn bài viết nào để hiển thị
+    if (visiblePosts >= posts.length) {
+        loadMoreBtn.style.display = 'none';
+    }
+
+    // Sự kiện nhấp vào nút "Xem thêm"
+    loadMoreBtn.addEventListener('click', function() {
+        visiblePosts += 3; // Hiển thị thêm 3 bài mỗi lần nhấn
         posts.forEach((post, index) => {
-            if (index >= visiblePosts) {
-                post.classList.add('hidden');
-                post.style.display = 'none';
-            } else {
+            if (index < visiblePosts) {
                 post.classList.remove('hidden');
                 post.style.display = 'block';
             }
         });
-    
-        // Ẩn nút "Xem thêm" nếu không còn bài viết nào để hiển thị
+
+        // Ẩn nút nếu tất cả bài viết đã hiển thị
         if (visiblePosts >= posts.length) {
             loadMoreBtn.style.display = 'none';
         }
-    
-        // Sự kiện nhấp vào nút "Xem thêm"
-        loadMoreBtn.addEventListener('click', function() {
-            visiblePosts += 3; // Hiển thị thêm 3 bài mỗi lần nhấn
-            posts.forEach((post, index) => {
-                if (index < visiblePosts) {
-                    post.classList.remove('hidden');
-                    post.style.display = 'block';
-                }
-            });
-    
-            // Ẩn nút nếu tất cả bài viết đã hiển thị
-            if (visiblePosts >= posts.length) {
-                loadMoreBtn.style.display = 'none';
-            }
-        });
     });
+
+    // Xử lý form thêm bài review
+    document.getElementById('review-form').addEventListener('submit', function(e) {
+        e.preventDefault(); // Ngăn form reload trang
+
+        // Lấy giá trị từ form
+        const title = document.getElementById('review-title').value;
+        const author = document.getElementById('review-author').value;
+        const imageFile = document.getElementById('review-image').files[0]; // Lấy file ảnh
+        const currentDate = new Date().toLocaleDateString('vi-VN'); // Lấy ngày hiện tại
+
+        // Tạo URL tạm thời cho ảnh từ file người dùng upload
+        const imageUrl = imageFile ? URL.createObjectURL(imageFile) : 'IMG/book2.jpg'; // Nếu không có ảnh, dùng ảnh mặc định
+
+        // Tạo card mới
+        const blogPosts = document.getElementById('blog-posts');
+        const newPost = document.createElement('div');
+        newPost.classList.add('col-md-4', 'mb-4', 'blog-post');
+        newPost.innerHTML = `
+            <div class="card h-100">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="${imageUrl}" class="card-img-top img-fluid custom-img" alt="Book Cover">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">${title}</h5>
+                            <p class="card-text">Ngày đăng: ${currentDate}</p>
+                            <p class="card-text">Bài viết mới được thêm bởi ${author}.</p>
+                            <p class="card-text"><strong>Tác giả:</strong> ${author}</p>
+                            <div class="post-meta">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                </div>
+                                <div class="views">
+                                    <i class="fas fa-eye"></i> 0 lượt xem
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Thêm card mới vào đầu danh sách
+        blogPosts.insertBefore(newPost, blogPosts.firstChild);
+
+        // Reset form sau khi thêm
+        this.reset();
+
+        // Cập nhật lại hiển thị của các bài viết
+        updatePostDisplay();
+    });
+});
+
+// Hàm cập nhật hiển thị bài viết
+function updatePostDisplay() {
+    const posts = document.querySelectorAll('.blog-post');
+    const loadMoreBtn = document.getElementById('load-more');
+    let visiblePosts = 6; // Số bài hiển thị ban đầu
+
+    posts.forEach((post, index) => {
+        if (index < visiblePosts) {
+            post.classList.remove('hidden');
+            post.style.display = 'block';
+        } else {
+            post.classList.add('hidden');
+            post.style.display = 'none';
+        }
+    });
+
+    // Hiển thị lại nút "Xem thêm" nếu có bài viết ẩn
+    if (posts.length > visiblePosts) {
+        loadMoreBtn.style.display = 'block';
+    }
+}
     </script>
 </body>
 </html>

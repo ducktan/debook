@@ -68,8 +68,9 @@ html, body {
 
 
 /* Điều chỉnh bố cục */
-.text-center.mb-4 {
+.text-left.mb-4 {
     color: #317923;
+
 }
 
 .col-md-4 {
@@ -239,6 +240,28 @@ html, body {
 }
 
 .container {
-    max-width: 90%; /* Chiếm 90% chiều rộng màn hình */
+    max-width: 95%; /* Chiếm 90% chiều rộng màn hình */
     margin: 0 auto; /* Căn giữa container */
 }
+#review-form {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#review-form .form-label {
+    font-weight: bold;
+    color: #317923;
+    margin-bottom: 0.25rem;
+}
+
+#review-form .form-control {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+}
+
+#review-form .btn-primary {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+
