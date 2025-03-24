@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Book</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./CSS/read_book.css">
+</head>
+<body>
+
+    <section class="head_top">
+        <button class="back-btn" onclick="goBack()">⟨</button>
+        <h4 class="title">Trong ngôi nhà của mẹ</h4>
+        <div class="icons">
+            <button onclick="toggleAudio()" title="Nghe audio">🎧</button>
+            <button onclick="openNotes()" title="Ghi chú">📑</button>
+            <button onclick="addBookmark()" title="Lưu trang">➕</button>
+            <button onclick="search()" title="Tìm kiếm">🔍</button>
+            <button onclick="toggleFullscreen()" title="Toàn màn hình">⛶</button>
+        </div>
+    </section>
+    
+    
+    
+    <div class="book container">
+        <!-- Trang đầu tiên -->
+        <div class="page left-page" id="page0"><img src="./IMG/book2.jpg" alt="Page 1"></div>
+        <div class="page right-page" id="page1"><p>Tình bạn là một trong những điều đẹp đẽ và quý giá nhất 
+            trong cuộc sống. Đó không chỉ là sự kết nối giữa hai con người mà còn là sự sẻ chia, thấu hiểu 
+            và đồng hành trong mọi chặng đường. Một người bạn tốt giống như một ngọn đèn soi sáng những lúc ta mờ mịt, là bờ vai để ta tựa vào những khi yếu lòng.
+            Một tình bạn chân thành không được đo lường bằng thời gian bên nhau mà bằng những khoảnh khắc mà 
+            ta thực sự hiểu và trân trọng nhau. Bạn bè có thể không luôn đồng ý với nhau, nhưng họ luôn sẵn sàng lắng nghe và tôn trọng suy nghĩ của nhau. Một người bạn thực sự là người không rời đi khi ta gặp khó khăn mà thay vào đó, họ nắm lấy tay ta và cùng vượt qua thử thách.
+        </p></div>
+    
+        <!-- Các trang tiếp theo -->
+        <div class="page left-page" id="page2"><p>
+            Tình bạn là một kho báu quý giá, nơi ta có thể chia sẻ niềm vui và nỗi buồn mà không lo bị phán xét. Một người bạn chân thành không chỉ ở bên khi ta vui mà còn sẵn sàng lắng nghe những tâm sự thầm kín. Khi có một người bạn tốt, cuộc sống trở nên nhẹ nhàng hơn vì ta biết rằng dù có chuyện gì xảy ra, vẫn có người luôn ủng hộ mình. Tình bạn không cần quá nhiều lời nói hoa mỹ, chỉ cần một cái ôm, một tin nhắn quan tâm cũng đủ khiến lòng ấm áp.</p></div>
+        <div class="page right-page" id="page3" style="display: none;"><p> Đó không chỉ là sự kết nối giữa hai con người mà còn là sự 
+            sẻ chia, thấu hiểu và đồng hành trong mọi chặng đường. Một người bạn tốt giống như một ngọn đèn 
+            soi sáng những lúc ta mờ mịt, là bờ vai để ta tựa vào những khi yếu lòng.
+            Tình bạn giống như một bản nhạc du dương, có những nốt thăng của niềm vui, những nốt trầm của nỗi buồn, nhưng khi hòa quyện lại, nó tạo nên một giai điệu đẹp của cuộc sống. Một người bạn thực sự không cần phải luôn ở bên, nhưng sẽ luôn xuất hiện đúng lúc khi ta cần. Họ không chỉ chia sẻ những nụ cười mà còn sẵn sàng lắng nghe những tiếng thở dài. Tình bạn không đo bằng thời gian, mà đo bằng sự chân thành, sự thấu hiểu và những kỷ niệm khó quên. Trong thế giới rộng lớn này, có được một người 
+            bạn tốt chính là một trong những điều may mắn nhất.</p></div>
+    
+        <div class="page left-page" id="page4" style="display: none;"><p>
+            Những thử thách trong cuộc sống là bài kiểm tra tốt nhất cho tình bạn. Khi mọi thứ suôn sẻ, ai cũng có thể ở bên ta, nhưng lúc khó khăn mới biết ai thật lòng. Một người bạn thực sự sẽ không rời đi khi ta gặp rắc rối, họ sẽ giúp đỡ, động viên hoặc đơn giản là lặng lẽ bên cạnh ta. Những người bạn như vậy không nhiều, nhưng một khi đã tìm thấy, hãy trân trọng họ. Tình bạn chân thành là điều không thể mua được, mà chỉ có thể được xây dựng bằng sự tin tưởng và yêu thương.</p></div>
+        <div class="page right-page" id="page5" style="display: none;"><p>
+            Bạn bè có thể không luôn đồng ý với nhau, nhưng họ luôn sẵn sàng
+            lắng nghe và tôn trọng suy nghĩ của nhau. Một người bạn thực sự là người không rời đi khi ta gặp khó 
+            khăn mà thay vào đó, họ nắm lấy tay ta và cùng vượt qua thử thách.
+            Một tình bạn đẹp không tự nhiên mà có, nó cần sự vun đắp từ cả hai phía. Lắng nghe, chia sẻ, tôn trọng và trung thực là những yếu tố quan trọng để duy trì một tình bạn lâu dài. Hãy trân trọng những người bạn thực sự, bởi trong thế giới rộng lớn này, tìm được một người đồng hành chân thành không phải là điều dễ dàng.
+
+            Tình bạn không chỉ là một mối quan hệ, mà là một hành trình mà mỗi người chúng ta đều may mắn có được. Hãy luôn yêu thương và trân trọng những người bạn bên cạnh bạn!</p></div>
+    
+        <div class="page left-page" id="page6" style="display: none;"><p> Tình bạn không bị giới hạn bởi tuổi tác, khoảng cách hay văn hóa. Dù hai người có xuất phát điểm khác nhau, nếu có sự đồng điệu về tâm hồn, họ vẫn có thể trở thành những người bạn tốt. Một cuộc trò chuyện ý nghĩa, một sở thích chung hay đơn giản là sự thấu hiểu cũng đủ để kết nối hai con người xa lạ. Nhờ tình bạn, ta học hỏi được nhiều điều mới, mở rộng tầm nhìn và có thêm động lực để trưởng thành. Một người bạn tốt là người giúp ta nhìn thế giới theo một cách đẹp hơn.
+
+        </p></div>
+        <div class="page right-page" id="page7" style="display: none;"><p>Thời gian có thể thay đổi con người, nhưng một tình bạn chân thành sẽ không bao giờ phai nhạt. Dù không gặp nhau thường xuyên, chỉ cần một tin nhắn hay một cuộc gọi cũng đủ để kết nối lại cảm xúc. Những người bạn thực sự không cần lúc nào cũng ở bên nhau, nhưng mỗi khi gặp lại, vẫn có thể trò chuyện như chưa từng xa cách. Một tình bạn bền vững là khi cả hai đều trân trọng và sẵn sàng gìn giữ nó, bất chấp thời gian có trôi qua bao lâu.
+            </p></div>
+    
+        <div class="page left-page" id="page8" style="display: none;"><p>
+            Một tình bạn chân thành không chỉ có niềm vui mà còn cần sự hy sinh. Đôi khi, đó là việc lắng nghe khi ta bận rộn, là sự nhường nhịn khi có bất đồng hay đơn giản là đặt hạnh phúc của bạn lên trên lợi ích cá nhân. Một người bạn tốt sẽ không chỉ nghĩ đến bản thân mà luôn mong muốn những điều tốt đẹp nhất cho người kia. Sự hy sinh trong tình bạn không phải là mất mát, mà là một cách để giữ gìn mối quan hệ lâu dài. Khi ta cho đi sự chân thành, ta cũng sẽ nhận lại được những điều đáng giá.
+        </p></div>
+        <div class="page right-page" id="page9" style="display: none;"><p>Những người bạn thuở nhỏ luôn giữ một vị trí đặc biệt trong lòng ta. Đó là những người đã cùng ta chạy nhảy, vui đùa, cùng chia sẻ những ước mơ ngây thơ. Dù lớn lên, mỗi người có một cuộc sống riêng, nhưng khi nhớ về tuổi thơ, ta vẫn cảm thấy ấm áp bởi những kỷ niệm đẹp. Những tình bạn từ thời thơ ấu, nếu được giữ gìn, có thể trở thành mối quan hệ gắn bó suốt đời. Khi bên cạnh họ, ta không cần che giấu bản thân, vì họ đã hiểu rõ ta từ những ngày còn vô tư nhất.
+
+
+        </p></div>
+    </div>
+    
+    
+
+    <div class="buttons container">
+        <button onclick="prevPage()">⟨ Quay lại</button>
+        <button onclick="nextPage()">Lật trang ⟩</button>
+    </div>
+
+    <!-- script -->
+     <script>
+    let currentPage = 2;
+const totalPages = 10;
+
+document.addEventListener("DOMContentLoaded", function () {
+    for (let i = 0; i < totalPages; i++) {
+        document.getElementById(`page${i}`).style.display = "none";
+    }
+    document.getElementById("page0").style.display = "flex";
+    document.getElementById("page1").style.display = "flex";
+});
+
+function nextPage() {
+    if (currentPage < totalPages) {
+        animatePageTurn(currentPage - 2, currentPage - 1, currentPage, currentPage + 1);
+        currentPage += 2;
+    }
+}
+
+function prevPage() {
+    if (currentPage > 2) {
+        currentPage -= 2;
+        animatePageTurn(currentPage, currentPage + 1, currentPage - 2, currentPage - 1, true);
+    }
+}
+
+function animatePageTurn(hide1, hide2, show1, show2, reverse = false) {
+    const pageHide1 = document.getElementById(`page${hide1}`);
+    const pageHide2 = document.getElementById(`page${hide2}`);
+    const pageShow1 = document.getElementById(`page${show1}`);
+    const pageShow2 = document.getElementById(`page${show2}`);
+
+    if (reverse) {
+        pageShow1.classList.add("flip-left");
+        pageShow2.classList.add("flip-left");
+    } else {
+        pageHide1.classList.add("flip-right");
+        pageHide2.classList.add("flip-right");
+    }
+
+    setTimeout(() => {
+        pageHide1.style.display = "none";
+        pageHide2.style.display = "none";
+        pageShow1.style.display = "flex";
+        pageShow2.style.display = "flex";
+
+        pageHide1.classList.remove("flip-right", "flip-left");
+        pageHide2.classList.remove("flip-right", "flip-left");
+        pageShow1.classList.remove("flip-right", "flip-left");
+        pageShow2.classList.remove("flip-right", "flip-left");
+    }, 600);
+}
+
+        function goBack() {
+            window.history.back();
+        }
+
+        function toggleAudio() {
+            alert("Tính năng nghe audio đang được phát triển!");
+        }
+
+        function openNotes() {
+            alert("Mở ghi chú...");
+        }
+
+        function addBookmark() {
+            alert("Đã lưu trang!");
+        }
+
+        function search() {
+            let query = prompt("Nhập từ khóa tìm kiếm:");
+            if (query) {
+                alert("Đang tìm kiếm: " + query);
+            }
+        }
+
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+    </script>
+    
+    
+
+</body>
+</html>
