@@ -241,10 +241,11 @@ header {
     margin-top: 25px;
     margin-right:-30px;
     margin-left:60px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 1, 0.3);
 }
 
 .pricing-card:hover {
-    background-color: #afb1a6;
+    background-color: #96a35c;
 }
 
 .pricing-card.popular {
@@ -298,4 +299,20 @@ header {
 
 .DKHV {
     margin-left: 2.5%;
+}
+
+
+.episode-title {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: bold;
+    color: #2c7bfa; /* Màu xanh dương */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.episode-title:hover {
+    color: #1a4fbf; /* Đổi sang xanh đậm khi hover */
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+    text-decoration: none;
 }

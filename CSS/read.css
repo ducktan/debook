@@ -435,13 +435,21 @@ header {
 
 .rating {
     font-size: 14px;
-    margin: 5px 0;
+    margin: 20px 0;
+  
 }
 
+.score
+{
+    margin-right: 10px;
+}
 .trending {
     margin: 5px 0;
 }
-
+.reviews
+{
+    margin-left: 10px;
+}
 .badge {
     background-color: red;
     color: white;
@@ -502,6 +510,8 @@ header {
     border-radius: 10px;
     align-items: center;
     margin-bottom: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 1, 0.3);
+    margin-top:  2rem;
 }
 
 .episode-image {
@@ -588,3 +598,19 @@ header {
 .inline-controls { display: flex; align-items: center; gap: 10px; }
 #volume { width: 80px; }
 .right-icons { display: flex; align-items: center; gap: 10px; }
+
+
+.episode-title {
+    display: inline-block;
+    font-size: 17px;
+    font-weight: bold;
+    color: #000000; /* Màu xanh dương */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.episode-title:hover {
+    color: #4b9369; /* Đổi sang xanh đậm khi hover */
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+    text-decoration: none;
+}

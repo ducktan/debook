@@ -12,11 +12,12 @@
 
 .title {
     flex-grow: 1;
-    padding-left: 35%;
-    padding-right: 25%;
+    text-align: center;
+    transform: translateX(127px);
     font-size: 22px;
     font-weight: bold;
     margin: 0;
+    max-width: 50%;
 }
 
 .back-btn {
@@ -183,4 +184,27 @@ button {
 .page.flip-left {
     transform: rotateY(-10deg);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.buttons button {
+    background-color: #6c986d; /* Màu xanh lá */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    gap: 20px;
+}
+
+.buttons button:hover {
+    background-color: #a1c194; /* Màu xanh đậm hơn khi hover */
+    transform: translateY(-2px);
+}
+
+.buttons button:active {
+    transform: scale(0.95);
 }
