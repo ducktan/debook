@@ -597,6 +597,7 @@ button {
     align-items: center; /* Căn giữa theo chiều dọc */
     gap: 10px; /* Khoảng cách giữa tiêu đề và dropdown */
 }
+/*
 .styled-select {
     font-size: 16px;
     padding: 12px 10px;
@@ -610,7 +611,7 @@ button {
     outline: none;
     transition: all 0.3s ease;
     appearance: none;
-   /* text-align: ;*/
+   
 }
 
 .styled-select:hover {
@@ -621,6 +622,13 @@ button {
 .styled-select:focus {
     border: 2px solid #66BB6A;
     box-shadow: 0px 0px 15px rgba(102, 187, 106, 0.8);
+}
+*/
+
+.styled-select {
+    font-size: 1rem;
+    padding: 5px 5px;
+    border-radius: 10px;
 }
 
 .select-wrapper {
@@ -722,7 +730,7 @@ button {
 
 .label {
 
-    background-color: #4a4a4a; /* Màu xám đậm */
+    background-image: linear-gradient(to right, #317923, #FDCE26); 
     color: white;
     font-weight: bold;
     font-size: 14px;
@@ -732,4 +740,5 @@ button {
     position: absolute;
     top: -10px; /* Điều chỉnh vị trí lên trên container */
     left: 10px;
+    
 }
