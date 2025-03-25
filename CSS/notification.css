@@ -148,13 +148,13 @@ html, body {
     cursor: pointer;
     margin-right: 1rem;
     color: #333;
-    font-size:1.5rem;
+    font-size: 1.25rem;
 }
 
 .tab.active {
     color: #317923;
     border-bottom: 2px solid #317923;
-    font-size:1.5rem;
+    font-size:1.25rem;
 }
 
 
@@ -286,7 +286,7 @@ html, body {
     font-weight: 700;
     display: flex;
     align-items: center;
-    font-size:1.5rem;
+    font-size:1.25rem;
 }
 
 .mark-all-read:hover {
