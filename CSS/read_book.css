@@ -1,9 +1,17 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+
+
 .head_top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #4a6c4f;
-    color: white;
+    background: linear-gradient(to right, #5e9160, #3c763d);
+    color: rgb(212, 212, 212);
     height: 60px;
     padding: 0 20px;
     border-bottom: 2px solid #ddd;
