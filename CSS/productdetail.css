@@ -257,7 +257,6 @@ header {
 .average-rating {
     font-weight: bold;
 }
-
 .rating-bars .rating-bar {
     display: flex;
     align-items: center;
