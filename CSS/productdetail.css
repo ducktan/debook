@@ -361,7 +361,121 @@ header {
         gap: 1rem;
     }
 }
+/* Cart Items Alignment */
+.cart-item .row {
+    align-items: center;
+}
 
+.cart-item .product-info {
+    align-items: center;
+}
+
+.cart-item .product-img {
+    width: 60px;
+    height: 80px;
+    object-fit: contain;
+    border: 1px solid #f1f1f1;
+    padding: 5px;
+    background: white;
+    border-radius: 4px;
+}
+
+.cart-item .product-details {
+    flex: 1;
+}
+
+.cart-item .product-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.cart-item .product-author,
+.cart-item .product-format {
+    font-size: 0.8rem;
+    margin-bottom: 0.1rem;
+}
+
+.cart-item .product-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-item .product-quantity .input-group {
+    max-width: 120px;
+    margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .cart-item .col-md-2,
+    .cart-item .col-md-1 {
+        margin-top: 10px;
+    }
+    
+    .cart-item .product-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .cart-item .product-img {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cart-item .row > div {
+        margin-top: 10px;
+    }
+    
+    .cart-item .product-price,
+    .cart-item .product-quantity,
+    .cart-item .product-total {
+        text-align: left !important;
+        justify-content: flex-start;
+    }
+    
+    .cart-item .product-quantity .input-group {
+        margin: 0;
+    }
+}
+/* Ô số lượng với viền xanh lá */
+.product-quantity .input-group {
+    border: 1px solid #317923;
+    border-radius: 4px;
+    overflow: hidden;
+    max-width: 120px;
+}
+
+.product-quantity .form-control {
+    border-left: 1px solid #317923 !important;
+    border-right: 1px solid #317923 !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    text-align: center;
+    padding: 0.25rem;
+    color: #317923;
+    font-weight: 500;
+}
+
+.product-quantity .btn-outline-secondary {
+    border: none !important;
+    color: #317923;
+    background-color: #f8f9fa;
+    padding: 0.25rem 0.5rem;
+}
+
+.product-quantity .btn-outline-secondary:hover {
+    background-color: #e9f5e9;
+}
+
+/* Thêm hiệu ứng khi focus vào ô input */
+.product-quantity .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(49, 121, 35, 0.25);
+    border-color: #317923 !important;
+    outline: none;
+}
 /* Footer */
 .footer {
     padding: 20px 0;

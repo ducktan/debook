@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debook - Giỏ hàng</title>
+    <link rel="icon" type="image/svg+xml" href="IMG/Logo.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS/cart.css">
+</head>
+<body class="bg-light">
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg mynav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="IMG/Logo.png" alt="logo" class="img-fluid mynav__logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 mynav__menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sách điện tử</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sách nói</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Podcast</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                    </ul>
+
+                    <form class="d-flex mynav__search" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <a href="" class="mynav__search-icon">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </form>
+                    <div class="other d-flex">
+                        <a href="#" class="nav-link">Đăng nhập</a>
+                        <a href="#" class="nav-link">Đăng ký</a>
+                        <div class="icon">
+                            <i class="fa fa-bell"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-4">
+        <div class="row">
+            <div class="col-lg-8">
+               
+                <!-- Cart Header -->
+                <div class="cart-header bg-white p-3 rounded shadow-sm mb-3">
+                    <div class="d-flex align-items-center">
+                        <div class="form-check flex-grow-1">
+                            <input class="form-check-input" type="checkbox" id="selectAll" checked>
+                            <label class="form-check-label fw-bold" for="selectAll">Sản phẩm</label>
+                        </div>
+                        <div class="text-center" style="width: 120px;">Đơn giá</div>
+                        <div class="text-center" style="width: 120px;">Số lượng</div>
+                        <div class="text-center" style="width: 120px;">Thành tiền</div>
+                        <div class="text-center" style="width: 50px;"><i class="fas fa-trash-alt"></i></div>
+                    </div>
+                </div>
+
+                <!-- Cart Items -->
+<div class="cart-items bg-white rounded shadow-sm">
+    <!-- Cart Item 1 -->
+    <div class="cart-item p-3 border-bottom">
+        <div class="row align-items-center">
+            <div class="col-auto">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" checked>
+                </div>
+            </div>
+            <div class="col">
+                <div class="product-info d-flex">
+                    <img src="IMG/bookIMG.png" alt="Hoàng Tử Bé" class="product-img me-3">
+                    <div class="product-details">
+                        <h6 class="product-title mb-1">Hoàng Tử Bé</h6>
+                        <div class="product-author text-muted small">Tác giả: Antoine de Saint-Exupéry</div>
+                        <div class="product-format text-muted small">Định dạng: Sách điện tử</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 text-center">
+                <div class="product-price">
+                    <span class="text-success fw-bold">200.000đ</span>
+                    <div class="text-decoration-line-through text-muted small">250.000đ</div>
+                </div>
+            </div>
+            <div class="col-md-2 text-center">
+                <div class="product-quantity">
+                    <div class="input-group input-group-sm">
+                        <button class="btn btn-outline-secondary">-</button>
+                        <input type="text" class="form-control text-center" value="1">
+                        <button class="btn btn-outline-secondary">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 text-center text-danger fw-bold">
+                200.000đ
+            </div>
+            <div class="col-md-1 text-center">
+                <button class="btn btn-sm btn-link text-danger"><i class="fas fa-trash-alt"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Item 2 -->
+    <div class="cart-item p-3 border-bottom">
+        <div class="row align-items-center">
+            <div class="col-auto">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" checked>
+                </div>
+            </div>
+            <div class="col">
+                <div class="product-info d-flex">
+                    <img src="IMG/bookIMG.png" alt="Đắc Nhân Tâm" class="product-img me-3">
+                    <div class="product-details">
+                        <h6 class="product-title mb-1">Đắc Nhân Tâm</h6>
+                        <div class="product-author text-muted small">Tác giả: Dale Carnegie</div>
+                        <div class="product-format text-muted small">Định dạng: Sách nói</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 text-center">
+                <div class="product-price">
+                    <span class="text-success fw-bold">150.000đ</span>
+                </div>
+            </div>
+            <div class="col-md-2 text-center">
+                <div class="product-quantity">
+                    <div class="input-group input-group-sm">
+                        <button class="btn btn-outline-secondary">-</button>
+                        <input type="text" class="form-control text-center" value="2">
+                        <button class="btn btn-outline-secondary">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 text-center text-danger fw-bold">
+                300.000đ
+            </div>
+            <div class="col-md-1 text-center">
+                <button class="btn btn-sm btn-link text-danger"><i class="fas fa-trash-alt"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Item 3 -->
+    <div class="cart-item p-3">
+        <div class="row align-items-center">
+            <div class="col-auto">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox">
+                </div>
+            </div>
+            <div class="col">
+                <div class="product-info d-flex">
+                    <img src="IMG/bookIMG.png" alt="Nhà Giả Kim" class="product-img me-3">
+                    <div class="product-details">
+                        <h6 class="product-title mb-1">Nhà Giả Kim</h6>
+                        <div class="product-author text-muted small">Tác giả: Paulo Coelho</div>
+                        <div class="product-format text-muted small">Định dạng: PDF Premium</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 text-center">
+                <div class="product-price">
+                    <span class="text-success fw-bold">180.000đ</span>
+                    <div class="text-decoration-line-through text-muted small">200.000đ</div>
+                </div>
+            </div>
+            <div class="col-md-2 text-center">
+                <div class="product-quantity">
+                    <div class="input-group input-group-sm">
+                        <button class="btn btn-outline-secondary">-</button>
+                        <input type="text" class="form-control text-center" value="1">
+                        <button class="btn btn-outline-secondary">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 text-center text-danger fw-bold">
+                180.000đ
+            </div>
+            <div class="col-md-1 text-center">
+                <button class="btn btn-sm btn-link text-danger"><i class="fas fa-trash-alt"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <!-- Continue Shopping -->
+                <div class="mt-3">
+                    <a href="#" class="text-success"><i class="fas fa-arrow-left me-2"></i>Tiếp tục mua sắm</a>
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="col-lg-4">
+                <div class="order-summary-header bg-white p-3 rounded shadow-sm mb-3">
+                    <h5 class="mb-0">Tóm tắt đơn hàng</h5>
+                </div>
+                
+                <div class="order-summary bg-white rounded shadow-sm p-3 sticky-top" style="top: 20px;">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Tạm tính:</span>
+                        <span>680.000đ</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Giảm giá:</span>
+                        <span class="text-success">-70.000đ</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Phí vận chuyển:</span>
+                        <span>0đ</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between mb-3">
+                        <span class="fw-bold">Tổng cộng:</span>
+                        <span class="text-danger fw-bold fs-5">610.000đ</span>
+                    </div>
+                    <button class="btn btn-danger w-100 rounded-pill py-2 mb-2">Mua hàng</button>
+                    <div class="text-center small text-muted">
+                        Bằng cách đặt hàng, bạn đồng ý với <a href="#">Điều khoản sử dụng</a> của Debook
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__row row">
+                <!-- Cột 1: Địa chỉ + Mạng xã hội -->
+                <div class="footer__col col-3">
+                    <img src="./IMG/Logo.png" alt="logo">
+                    <div class="footer__social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                    </div>
+                </div>
+
+                <!-- Cột 2: Dịch vụ -->
+                <div class="footer__col col-3">
+                    <h5>DỊCH VỤ</h5>
+                    <ul>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                        <li><a href="#">Chính sách bảo mật thông tin cá nhân</a></li>
+                        <li><a href="#">Chính sách bảo mật thanh toán</a></li>
+                        <li><a href="#">Giới thiệu De-book</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 3: Tài khoản -->
+                <div class="footer__col col-3">
+                    <h5>TÀI KHOẢN CỦA TÔI</h5>
+                    <ul>
+                        <li><a href="#">Đăng nhập/Đăng ký</a></li>
+                        <li><a href="#">Thay đổi thông tin khách hàng</a></li>
+                        <li><a href="#">Chi tiết tài khoản</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 4: Liên hệ -->
+                <div class="footer__col col-3">
+                    <h5>LIÊN HỆ</h5>
+                    <p>Khu phố 6, P.Linh Trung, Tp.Thủ Đức, Tp.HCM.</p>
+                    <p>cskh@debook.com.vn</p>
+                    <p>19005656</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
