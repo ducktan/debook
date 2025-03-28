@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f2f5;
+}
+
+.my-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.blog-post {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Header */
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.author-info {
+    flex: 1;
+}
+
+.author-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1c2526;
+}
+
+.post-time {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Nội dung */
+.post-content {
+    padding: 15px;
+}
+
+.post-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.post-content p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Tương tác */
+.post-actions {
+    padding: 10px 15px;
+    border-top: 1px solid #ddd;
+}
+
+.action-stats {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s;
+}
+
+.action-btn:hover {
+    color: #1877f2;
+}
+
+.action-btn.liked {
+    color: #ff0000;
+}
+
+/* Bình luận */
+.comments-section {
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    display: none; /* Ẩn mặc định */
+}
+
+.comment-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#comment-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+}
+
+#submit-comment {
+    background: #1877f2;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.comment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comment {
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        margin: 10px auto;
+        padding: 0 10px;
+    }
+
+    .post-header {
+        padding: 10px;
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .post-title {
+        font-size: 18px;
+    }
+
+    .action-btn {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    #comment-input {
+        font-size: 12px;
+    }
+
+    #submit-comment {
+        padding: 6px 10px;
+    }
+}
