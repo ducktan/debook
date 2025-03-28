@@ -24,122 +24,7 @@ html,body{
     margin-bottom: 5rem;
 }
 
-/* Header */
-header {
-    margin-bottom: 1rem;
-}
-.mynav .navbar-brand{
-    margin-left: 5rem;
-    margin-right: 2rem;
-}
-.mynav .mynav__logo {
-    width: 200px;
-    height: auto;
-}
 
-.mynav .mynav__menu{
-    margin-right: 3rem;
-}
-
-.mynav .mynav__menu li{
-    margin-right: 1rem;
-    font-weight: 700;
-}
-
-.mynav .mynav__search {
-    border: 2px solid #000;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    padding: 0 0.5rem;
-    gap: 0.5rem;
-    margin-right: 3rem;
-}
-
-.mynav .mynav__search input {
-    border: none;
-    background-color: transparent;
-    width: 15rem;
-    font-size: 1rem;
-    padding: 0.5rem;
-}
-
-.mynav .mynav__search input:focus {
-    outline: none;
-    box-shadow: none;
-}
-
-/* Loại bỏ hiệu ứng autofill */
-.mynav .mynav__search input:-webkit-autofill,
-.mynav .mynav__search input:-webkit-autofill:hover, 
-.mynav .mynav__search input:-webkit-autofill:focus, 
-.mynav .mynav__search input:-webkit-autofill:active {
-    background-color: transparent !important;
-    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
-    box-shadow: 0 0 0px 1000px transparent inset !important;
-    transition: background-color 9999s ease-in-out 0s;
-    color: #000 !important;
-}
-
-
-.mynav .mynav__search-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #317923;
-    color: #fff;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    text-decoration: none;
-}
-.mynav .mynav__search a:hover {
-    color: #000; 
-}
-
-.mynav .mynav__search-icon i {
-    font-size: 1rem;
-}
-
-/* #317923
-#FDCE26
- */
-
- .mynav .other {
-    font-weight: 700;
-    align-items: center;
- }
- .mynav .other a{
-    margin-right: 2rem;
- }
- .mynav .other .icon{
-    background-color: #317923;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%; 
-    border: 1px solid #317923;
-    color: #fff;
-    transition: all .5s;
-    padding: 1.2rem;
-    cursor: pointer;
- }
- .mynav .other .icon:hover{
-    background-color: white;
-    color: #317923;
-    
- }
- .mynav a {
-    transition: color 0.3s ease-in-out;
- }
- .mynav a:hover {
-    color:#317923;
- }
- .mynav__menu .nav-link.active {
-    color: #317923; /* Đổi sang màu cam hoặc màu bạn thích */
-}
 
 /* Banner */
 
@@ -239,159 +124,8 @@ header {
     color: white;
     font-weight: 700;
 }
-/* Playlist */
-
-/* Căn giữa theo chiều dọc */
-.playlist__item {
-    display: flex;
-    flex-direction: column; /* Sắp xếp hình và chữ theo chiều dọc */
-    align-items: center; /* Căn giữa theo chiều ngang */
-    justify-content: center; /* Căn giữa theo chiều dọc */
-    height: 100%; /* Chiều cao 100% của cột */
-    text-align: center; /* Căn giữa chữ */
-}
-
-/* Hình ảnh */
-.playlist__row .playlist__img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-image: url('../IMG/playlist1.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-bottom: 10px; /* Tạo khoảng cách giữa ảnh và chữ */
-}
-
-/* Contact */
-/* Contact Section */
-.contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 300px;
-    background-image: url('../IMG/don.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-/* Lớp phủ đen mờ */
-.contact__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Màu đen mờ */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Nội dung chính */
-.contact__text {
-    text-align: center;
-    color: white;
-    padding: 20px;
-    max-width: 100%;
-    background: rgba(255, 255, 255, 0.1); /* Làm mờ nội dung một chút */
-    backdrop-filter: blur(5px); /* Hiệu ứng mờ đẹp */
-    border-radius: 10px;
-}
-
-/* Tiêu đề */
-.contact__text p:first-child {
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 2rem;
-}
-
-/* Form */
-.contact__text .form-control {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-/* Placeholder màu trắng */
-.contact__text .form-control::placeholder {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-/* Button */
-.contact__text .btn {
-    background-color: #FDCE26;
-    border: none;
-    font-weight: bold;
-}
-
-.contact__text .btn:hover {
-    background-color: #317923;
-}
-
-/* Footer */
-/* Footer */
-.footer {
-    padding: 20px 0;
-    color: black;
-}
 
 
-
-
-
-.footer__col h5 {
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-.footer__col img {
-    width: 180px;
-    height: 40px;
-    margin-bottom: 1rem;
-}
-.footer__col p {
-    margin: 0;
-    margin-bottom: 0.5rem;
-}
-
-.footer__col ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer__col ul li {
-    margin-bottom: 5px;
-}
-
-.footer__col ul li a {
-    text-decoration: none;
-    color: black;
-    transition: all .5s;
-}
-
-.footer__col ul li a:hover {
-    color: #317923;
-}
-
-/* Mạng xã hội */
-.footer__social {
-    margin-top: 10px;
-}
-
-.footer__social a {
-    font-size: 30px;
-    margin-right: 10px;
-    color: black;
-    text-decoration: none;
-    transition: all .5s;
-}
-
-.footer__social a:hover {
-    color: #317923;
-}
 
 
 
@@ -410,7 +144,7 @@ header {
 
 .podcast-image {
     position: relative;
-    width: 140px;
+    width: 200px;
 }
 
 .podcast-image img {
@@ -430,7 +164,7 @@ header {
 }
 
 .podcast-info {
-    flex: 1;
+    width: 70%;
 }
 
 .rating {
@@ -560,7 +294,7 @@ header {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background 0.3s;
+    /* transition: background 0.3s; */
 }
 
 .play-button:hover {
@@ -579,38 +313,210 @@ header {
 }
 
 
-/* phần play podcast */
-
-.audio-player { display: flex; align-items: center; background-color:#7e935f; padding: 10px 20px; border-radius: 12px; width: 100%; max-width: 1000px; gap: 15px; color: white;
-    position: fixed; bottom: 0; left: 0; right: 0; z-index: 1000;
+/* Phần play podcast */
+.audio-player {
+    display: flex;
+    align-items: center;
+    background-color: #7e935f;
+    padding: 10px 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 1000px;
+    gap: 15px;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     display: none; /* Ẩn thanh phát nhạc ban đầu */
+    flex-wrap: wrap; /* Cho phép các phần tử xuống dòng khi màn hình nhỏ */
+    box-sizing: border-box; /* Đảm bảo padding không làm vượt kích thước */
 }
-.track-info { display: flex; align-items: center; gap: 10px; max-width: 250px; }
-.track-cover { width: 48px; height: 48px; border-radius: 12px; }
-.track-title { font-size: 14px; font-weight: bold; white-space: nowrap;  text-overflow: ellipsis; }
-.track-artist { font-size: 12px; color: #ccc; white-space: nowrap; text-overflow: ellipsis; }
-.controls { display: flex; align-items: center; gap: 8px; flex: 1; }
-.icon-btn { background: none; border: none; color: white; cursor: pointer; font-size: 18px; }
-.progress-bar { display: flex; align-items: center; gap: 5px; flex: 0.75;overflow: initial; }
-#seekBar { width: 60%; height: 4px; border-radius: 5px; background: #555; appearance: none; cursor: pointer; }
-#seekBar::-webkit-slider-thumb { appearance: none; width: 10px; height: 10px; background: white; border-radius: 50%; cursor: pointer; }
-#currentTime, #duration { font-size: 12px; color: #bbb; }
-.inline-controls { display: flex; align-items: center; gap: 10px; }
-#volume { width: 80px; }
-.right-icons { display: flex; align-items: center; gap: 10px; }
 
+.track-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 250px;
+    flex-shrink: 0; /* Ngăn phần này bị co lại quá mức */
+}
 
+.track-cover {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+}
+
+.track-title {
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.track-artist {
+    font-size: 12px;
+    color: #ccc;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 0; /* Đảm bảo controls không bị tràn khi co lại */
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex: 0.75;
+    overflow: initial;
+    width: 100%; /* Đảm bảo thanh tiến trình chiếm toàn bộ chiều rộng khi cần */
+}
+
+#seekBar {
+    width: 100%; /* Chiếm toàn bộ chiều rộng của container cha */
+    height: 4px;
+    border-radius: 5px;
+    background: #555;
+    appearance: none;
+    cursor: pointer;
+}
+
+#seekBar::-webkit-slider-thumb {
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#currentTime, #duration {
+    font-size: 12px;
+    color: #bbb;
+}
+
+.right-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#volume {
+    width: 80px;
+}
+
+/* Media Queries cho responsive */
+@media (max-width: 768px) {
+    .audio-player {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .track-info {
+        max-width: 200px;
+    }
+
+    .track-cover {
+        width: 40px;
+        height: 40px;
+    }
+
+    .track-title {
+        font-size: 12px;
+    }
+
+    .track-artist {
+        font-size: 10px;
+    }
+
+    .icon-btn {
+        font-size: 16px;
+    }
+
+    .controls {
+        flex-wrap: wrap; /* Cho phép các nút xuống dòng nếu cần */
+        justify-content: center;
+    }
+
+    .progress-bar {
+        flex: 1; /* Chiếm toàn bộ chiều rộng khi xuống dòng */
+        order: 1; /* Đẩy progress bar xuống dưới trên màn hình nhỏ */
+    }
+
+    #volume {
+        width: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .audio-player {
+        padding: 8px;
+        gap: 8px;
+    }
+
+    .track-info {
+        max-width: 150px;
+    }
+
+    .track-cover {
+        width: 32px;
+        height: 32px;
+    }
+
+    .track-title {
+        font-size: 10px;
+    }
+
+    .track-artist {
+        font-size: 9px;
+    }
+
+    .icon-btn {
+        font-size: 14px;
+    }
+
+    #currentTime, #duration {
+        font-size: 10px;
+    }
+
+    #volume {
+        width: 50px;
+    }
+
+    .right-icons {
+        gap: 5px;
+    }
+}
+
+/* CSS cho episode-title không thay đổi */
 .episode-title {
     display: inline-block;
     font-size: 17px;
     font-weight: bold;
-    color: #000000; /* Màu xanh dương */
+    color: #000000;
     text-decoration: none;
     transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .episode-title:hover {
-    color: #4b9369; /* Đổi sang xanh đậm khi hover */
-    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+    color: #4b9369;
+    transform: scale(1.05);
     text-decoration: none;
 }

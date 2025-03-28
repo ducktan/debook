@@ -1,0 +1,98 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Tiêu đề */
+.title-container {
+    background: linear-gradient(to right, #5e9160, #3c763d);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    position: relative; /* Để đặt nút về góc trái */
+}
+
+.title-container h1, .title-container h4 {
+    margin: 5px 0;
+}
+
+.title-container h1:hover {
+    color: #ffe600;
+    transition: 0.3s;
+}
+
+/* Nội dung bài viết */
+.read-container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    line-height: 2;
+    font-size: 18px;
+    padding-left: 10%;
+    padding-right:10%;
+}
+.back-button {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    /* transition: background 0.3s; */
+}
+
+.back-button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
+.nav-buttons button {
+    background-color: #3c763d;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* transition: background 0.3s; */
+}
+
+.nav-buttons button:hover {
+    background-color: #2e5a2d;
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+    .read-container {
+        padding: 20px;
+    }
+}
+@media (max-width: 530px) {
+    .title__text {
+        display: block;
+    }
+    .back-button {
+        top: 80%;
+        left: 45%;
+    }
+    .title-container {
+        height: 160px;
+    }
+}

@@ -313,3 +313,13 @@ header {
     transform: scale(1.05); /* Phóng to nhẹ khi hover */
     text-decoration: none;
 }
+
+.myrow {
+    padding-left: 2rem;
+}
+@media screen and (max-width: 374px) {
+    .DKHV p {
+        display: none;
+    }
+    
+}

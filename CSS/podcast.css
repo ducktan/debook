@@ -528,7 +528,7 @@ header {
 
 
 /* slider*/
-.container {
+.p-container {
     display: flex;
     /*align-items: center;*/
     justify-content: space-between;
@@ -596,6 +596,7 @@ button {
     display: flex;
     align-items: center; /* Căn giữa theo chiều dọc */
     gap: 10px; /* Khoảng cách giữa tiêu đề và dropdown */
+    position: relative; /* Để có thể sử dụng absolute cho dropdown */
 }
 /*
 .styled-select {
@@ -676,7 +677,7 @@ button {
 }
 .podcast-section h2 {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 2rem;
 }
 .podcast-list {
     display: flex;
@@ -698,14 +699,15 @@ button {
     width: 100%;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
+    margin-bottom: 1rem;
 
 }
 .podcast-item img:hover {
     transform: scale(1.05);
 }
 .podcast-item p {
-    margin-top: 5px;
-    font-size: 14px;
+    font-size: 1.15rem;
+    font-weight: 500;
 }
 .podcast-item .description {
     position: absolute;
@@ -738,7 +740,18 @@ button {
     border-radius: 16px; /* Bo góc giống ảnh */
     text-transform: uppercase;
     position: absolute;
-    top: -10px; /* Điều chỉnh vị trí lên trên container */
-    left: 10px;
+    bottom: -10px;
     
+}
+
+@media screen and (max-width: 460px) {
+   .p-container.fixCode {
+        display: block;
+   } 
+   .podcast-content {
+    max-width: 100%;
+   }
+   .label {
+    bottom: -1rem;
+   }
 }
