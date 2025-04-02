@@ -1,0 +1,112 @@
+/* Summary Cards */
+.summary-card {
+    border-radius: 10px;
+    border-left: 4px solid;
+    transition: all 0.3s;
+}
+
+.summary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.border-start-primary { border-left-color: #4285F4; }
+.border-start-success { border-left-color: #34A853; }
+.border-start-warning { border-left-color: #FBBC05; }
+.border-start-danger { border-left-color: #EA4335; }
+
+/* Payment Table */
+.payment-table {
+    font-size: 14px;
+}
+
+.payment-table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #6c757d;
+}
+
+.payment-row {
+    transition: all 0.3s;
+}
+
+.payment-row:hover {
+    background-color: rgba(251, 188, 5, 0.03) !important;
+}
+
+/* Payment Method Icons */
+.payment-method-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Status Badges */
+.status-badge {
+    padding-left: 20px;
+    position: relative;
+}
+
+.status-badge i {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .payment-table th:nth-child(4),
+    .payment-table td:nth-child(4),
+    .payment-table th:nth-child(5),
+    .payment-table td:nth-child(5) {
+        display: none;
+    }
+    
+    .summary-card .fs-1 {
+        font-size: 1.5rem !important;
+    }
+}
+/* ===== Sidebar ===== */
+.sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    background: white;
+    box-shadow: 1px 0 10px rgba(0, 0, 0, 0.05);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.nav-link {
+    transition: all 0.01s ease-in-out;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    padding: 10px 15px !important;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: rgba(66, 133, 244, 0.1);
+    color: blue;
+    font-weight: 700;
+}
+
+.nav-link i {
+    width: 24px;
+    text-align: center;
+    margin-right: 12px;
+    font-size: 1.1rem;
+}
+.nav-item .nav-link.active {
+    border-left: 4px solid #0d6efd;
+    background-color: rgba(13, 110, 253, 0.1);
+    color: blue ;
+    font-weight: 700;
+    margin-left: -4px; /* Căn chỉnh do border */
+}
+
+.nav-item .nav-link.active i {
+    transform: scale(1.1); /* Phóng to icon nhẹ */
+}

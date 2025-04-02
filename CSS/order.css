@@ -1,0 +1,462 @@
+/* ===== CORE STYLES ===== */
+.order-management-container {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* ===== HEADER & FILTER BAR ===== */
+.management-header {
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.filter-bar {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.filter-bar label {
+    font-weight: 500;
+    color: #495057;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.filter-bar .form-select,
+.filter-bar .form-control {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    box-shadow: none;
+}
+
+.filter-bar .form-select:focus,
+.filter-bar .form-control:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.1);
+}
+
+/* ===== STATS CARDS ===== */
+.stats-card {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stats-card .card-body {
+    padding: 1.25rem;
+}
+
+.stats-card h6 {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+}
+
+.stats-card h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+/* Border colors for stats cards */
+.stats-card.total-orders {
+    border-left: 4px solid #0d6efd;
+}
+
+.stats-card.pending-orders {
+    border-left: 4px solid #ffc107;
+}
+
+.stats-card.confirmed-orders {
+    border-left: 4px solid #198754;
+}
+
+.stats-card.shipping-orders {
+    border-left: 4px solid #0dcaf0;
+}
+
+.stats-card.delivered-orders {
+    border-left: 4px solid #6c757d;
+}
+
+.stats-card.cancelled-orders {
+    border-left: 4px solid #dc3545;
+}
+
+/* ===== ORDERS TABLE ===== */
+.orders-table {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.orders-table thead th {
+    background-color: #f8f9fa;
+    color: #495057;
+    font-weight: 600;
+    padding: 1rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.orders-table tbody td {
+    padding: 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.orders-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.orders-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* ===== ORDER STATUS BADGES ===== */
+.order-status {
+    font-weight: 600;
+    font-size: 0.75rem;
+    padding: 0.35rem 0.65rem;
+    border-radius: 50px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-confirmed {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-shipping {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.status-delivered {
+    background-color: #e2e3e5;
+    color: #383d41;
+}
+
+.status-cancelled {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* ===== PRODUCT IMAGE ===== */
+.product-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.action-btn {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.action-btn:hover {
+    transform: scale(1.1);
+}
+
+.btn-view {
+    background-color: rgba(13, 110, 253, 0.1);
+    color: #0d6efd;
+}
+
+.btn-view:hover {
+    background-color: rgba(13, 110, 253, 0.2);
+}
+
+.btn-confirm {
+    background-color: rgba(25, 135, 84, 0.1);
+    color: #198754;
+}
+
+.btn-confirm:hover {
+    background-color: rgba(25, 135, 84, 0.2);
+}
+
+.btn-ship {
+    background-color: rgba(13, 202, 240, 0.1);
+    color: #0dcaf0;
+}
+
+.btn-ship:hover {
+    background-color: rgba(13, 202, 240, 0.2);
+}
+
+.btn-cancel {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+}
+
+.btn-cancel:hover {
+    background-color: rgba(220, 53, 69, 0.2);
+}
+
+/* ===== ORDER CARDS (MOBILE) ===== */
+.order-card {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+    border-left: 4px solid;
+}
+
+.order-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.order-card .card-body {
+    padding: 1.25rem;
+}
+
+.order-card.pending {
+    border-left-color: #ffc107;
+}
+
+.order-card.confirmed {
+    border-left-color: #198754;
+}
+
+.order-card.shipping {
+    border-left-color: #0dcaf0;
+}
+
+.order-card.delivered {
+    border-left-color: #6c757d;
+}
+
+.order-card.cancelled {
+    border-left-color: #dc3545;
+}
+
+.order-card .card-title {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.order-card .text-muted {
+    font-size: 0.8rem;
+}
+
+.order-card .product-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.order-card .product-info img {
+    margin-right: 1rem;
+}
+
+.order-card .product-details {
+    flex: 1;
+}
+
+.order-card .product-details .price {
+    font-weight: 700;
+    color: #198754;
+}
+
+.order-card .action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+/* ===== MODAL STYLES ===== */
+.order-modal .modal-header {
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 1rem;
+}
+
+.order-modal .modal-title {
+    font-weight: 600;
+}
+
+.order-modal .modal-body {
+    padding: 1.5rem;
+}
+
+.order-modal .info-section {
+    margin-bottom: 1.5rem;
+}
+
+.order-modal .info-section h6 {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 0.5rem;
+}
+
+.order-modal .info-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.order-modal .info-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.order-modal .info-section ul li strong {
+    font-weight: 600;
+    color: #343a40;
+    display: inline-block;
+    width: 120px;
+}
+
+.order-modal .products-table {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.order-modal .products-table th,
+.order-modal .products-table td {
+    padding: 0.75rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.order-modal .products-table th {
+    font-weight: 600;
+    background-color: #f8f9fa;
+}
+
+.order-modal .summary-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.order-modal .summary-card h6 {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 1rem;
+}
+
+.order-modal .summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.order-modal .total-row {
+    font-weight: 700;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e9ecef;
+}
+
+/* ===== PAGINATION ===== */
+.pagination-container {
+    margin-top: 2rem;
+}
+
+.pagination .page-item .page-link {
+    border-radius: 8px;
+    margin: 0 0.25rem;
+    border: none;
+    color: #495057;
+    min-width: 36px;
+    text-align: center;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #adb5bd;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 767.98px) {
+    .stats-card {
+        margin-bottom: 1rem;
+    }
+    
+    .filter-bar .col-md-3 {
+        margin-bottom: 1rem;
+    }
+    
+    .order-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    background: white;
+    box-shadow: 1px 0 10px rgba(0, 0, 0, 0.05);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.nav-link {
+    transition: all 0.01s ease-in-out;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    padding: 10px 15px !important;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: rgba(66, 133, 244, 0.1);
+    color: blue;
+    font-weight: 700;
+}
+
+.nav-link i {
+    width: 24px;
+    text-align: center;
+    margin-right: 12px;
+    font-size: 1.1rem;
+}
+.nav-item .nav-link.active {
+    border-left: 4px solid #0d6efd;
+    background-color: rgba(13, 110, 253, 0.1);
+    color: blue ;
+    font-weight: 700;
+    margin-left: -4px; /* Căn chỉnh do border */
+}
+
+.nav-item .nav-link.active i {
+    transform: scale(1.1); /* Phóng to icon nhẹ */
+}
