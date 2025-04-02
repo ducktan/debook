@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debook - Admin Dashboard</title>
+    <link rel="icon" type="image/png" href="../IMG/favicon.png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./CSS/content.css">
+    <link rel="stylesheet" href="./CSS/admin.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-3 col-lg-2 d-md-block bg-white sidebar border-end p-3 min-vh-100">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <img src="./IMG/Logo.png" alt="logo" class="img-fluid mynav__logo">
+                    <button class="btn btn-sm d-md-none" id="sidebarToggle">
+                        <i class="bi bi-list"></i>
+                    </button>
+                </div>
+                
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="./admin.html">
+                            <i class="bi bi-speedometer2 text-primary"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="./userManagement.html">
+                            <i class="bi bi-people-fill text-warning"></i>
+                            <span>Người dùng</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="./authorManagement.html">
+                            <i class="bi bi-person-badge-fill text-success"></i>
+                            <span>Tác giả</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="./productManagement.html">
+                            <i class="bi bi-book-half text-info"></i>
+                            <span>Sản phẩm</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="./orderManagement.html">
+                            <i class="bi bi-cart-check text-danger"></i>
+                            <span>Đơn hàng</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="./paymentManagement.html">
+                            <i class="bi bi-credit-card text-secondary"></i>
+                            <span>Thanh toán</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center active" href="./contentManagement.html">
+                            <i class="bi bi-file-earmark-text text-dark"></i>
+                            <span>Nội dung</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+                <!-- Header -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="fw-bold mb-0">
+                        <i class="bi bi-file-earmark-richtext me-2" style="color: #34A853;"></i>QUẢN LÝ NỘI DUNG 
+                    </h2>
+                </div>
+
+                <!-- Filter Bar -->
+                <div class="filter-bar">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="form-label">Trạng thái</label>
+                            <select class="form-select" id="statusFilter">
+                                <option value="all">Tất cả</option>
+                                <option value="pending">Chờ duyệt</option>
+                                <option value="approved">Đã duyệt</option>
+                                <option value="rejected">Từ chối</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Ngày tạo</label>
+                            <select class="form-select" id="dateFilter">
+                                <option value="all">Tất cả</option>
+                                <option value="today">Hôm nay</option>
+                                <option value="week">Tuần này</option>
+                                <option value="month">Tháng này</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Tìm kiếm</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Tìm theo tiêu đề, người tạo...">
+                                <button class="btn btn-outline-secondary" type="button">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-2 d-flex align-items-end">
+                            <button class="btn btn-secondary w-100">
+                                <i class="bi bi-funnel me-1"></i> Lọc
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Tabs -->
+                <ul class="nav nav-tabs mb-4" id="contentTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="postcards-tab" data-bs-toggle="tab" data-bs-target="#postcards" type="button">
+                            <i class="bi bi-postcard-heart me-1"></i> Postcards
+                            <span class="badge bg-danger ms-1">3</span>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="articles-tab" data-bs-toggle="tab" data-bs-target="#articles" type="button">
+                            <i class="bi bi-newspaper me-1"></i> Bài viết
+                            <span class="badge bg-danger ms-1">3</span>
+                        </button>
+                    </li>
+                </ul>
+
+                <!-- Tab Content -->
+                <div class="tab-content" id="contentTabsContent">
+                    <!-- Postcards Tab -->
+                    <div class="tab-pane fade show active" id="postcards" role="tabpanel">
+                        <div class="table-responsive mb-4 d-none d-md-block">
+                            <table class="table table-hover align-middle">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th width="50px">ID</th>
+                                        <th width="120px">Ảnh</th>
+                                        <th>Tiêu đề</th>
+                                        <th width="150px">Người tạo</th>
+                                        <th width="120px">Ngày tạo</th>
+                                        <th width="120px">Trạng thái</th>
+                                        <th width="150px">Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#123</td>
+                                        <td>
+                                            <img src="https://images.unsplash.com/photo-1546527868-ccb7ee7dfa6a" class="img-thumbnail" style="width: 80px; height: 60px; object-fit: cover;">
+                                        </td>
+                                        <td>Mùa hè rực rỡ</td>
+                                        <td>Nguyễn Văn A
+                                            <small>abc@gmail.com</small>
+                                        </td>
+                                        <td>15/05/2023</td>
+                                        <td><span class="badge bg-success">Đã duyệt</span></td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editPostModal">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#124</td>
+                                        <td>
+                                            <img src="https://images.unsplash.com/photo-1589998059171-988d887df646" class="img-thumbnail" style="width: 80px; height: 60px; object-fit: cover;">
+                                        </td>
+                                        <td>Sách hay mùa thu</td>
+                                        <td>Trần Thị B
+                                            <small>abc@gmail.com</small>
+                                        </td>
+                                        <td>10/10/2023</td>
+                                        <td><span class="badge bg-warning text-dark">Chờ duyệt</span></td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm">
+                                                <button class="btn btn-outline-success" title="Duyệt">
+                                                    <i class="bi bi-check-circle"></i>
+                                                </button>
+                                                <button class="btn btn-outline-danger" title="Từ chối">
+                                                    <i class="bi bi-x-circle"></i>
+                                                </button>
+                                                <button class="btn btn-outline-primary" title="Sửa">
+                                                    <i class="bi bi-pencil"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- Thêm các hàng khác -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Grid View for Mobile -->
+                        <div class="row g-4 d-md-none">
+                            <!-- Postcard Item 1 -->
+                            <div class="col-12">
+                                <div class="postcard-card">
+                                    <div class="postcard-thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1546527868-ccb7ee7dfa6a" class="img-fluid">
+                                        <div class="postcard-badge trending">
+                                            <i class="bi bi-fire"></i> Trending
+                                        </div>
+                                        <div class="postcard-status badge status-approved">
+                                            Đã duyệt
+                                        </div>
+                                    </div>
+                                    <div class="postcard-body">
+                                        <h5 class="postcard-title">Mùa hè rực rỡ</h5>
+                                        <p class="postcard-desc">Bộ sưu tập sách mùa hè 2023</p>
+                                        <div class="postcard-meta">
+                                            <span class="me-3"><i class="bi bi-person me-1"></i> Nguyễn Văn A</span>
+                                            <span class="me-3"><i class="bi bi-calendar me-1"></i> 15/05</span>
+                                            <span><i class="bi bi-heart me-1"></i> 245</span>
+                                        </div>
+                                        <div class="admin-actions">
+                                            <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editPostModal">
+                                                <i class="bi bi-pencil me-1"></i>Sửa
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                                <i class="bi bi-trash me-1"></i>Xóa
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Postcard Item 2 (Pending) -->
+                            <div class="col-12">
+                                <div class="postcard-card">
+                                    <div class="postcard-thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1589998059171-988d887df646" class="img-fluid">
+                                        <div class="postcard-status badge status-pending">
+                                            Chờ duyệt
+                                        </div>
+                                    </div>
+                                    <div class="postcard-body">
+                                        <h5 class="postcard-title">Sách hay mùa thu</h5>
+                                        <p class="postcard-desc">Tuyển tập sách mùa thu 2023</p>
+                                        <div class="postcard-meta">
+                                            <span class="me-3"><i class="bi bi-person me-1"></i> Trần Thị B</span>
+                                            <span class="me-3"><i class="bi bi-calendar me-1"></i> 10/10</span>
+                                            <span><i class="bi bi-heart me-1"></i> 189</span>
+                                        </div>
+                                        <div class="admin-actions">
+                                            <button class="btn btn-sm btn-outline-success me-1">
+                                                <i class="bi bi-check-circle me-1"></i>Duyệt
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger me-1">
+                                                <i class="bi bi-x-circle me-1"></i>Từ chối
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-primary">
+                                                <i class="bi bi-pencil me-1"></i>Sửa
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <nav class="mt-4">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Trước</a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Tiếp</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- Articles Tab -->
+                    <div class="tab-pane fade" id="articles" role="tabpanel">
+                        <div class="table-responsive mb-4 d-none d-md-block">
+                            <table class="table table-hover align-middle">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th width="50px">ID</th>
+                                        <th>Tiêu đề</th>
+                                        <th width="180px">Tác giả</th>
+                                        <th width="120px">Ngày đăng</th>
+                                        <th width="100px">Lượt xem</th>
+                                        <th width="120px">Trạng thái</th>
+                                        <th width="150px">Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#201</td>
+                                        <td>10 cuốn sách hay nhất năm 2023</td>
+                                        <td>
+                                            <div>Nguyễn Văn A</div>
+                                            <small class="text-muted">nguyenvana@example.com</small>
+                                        </td>
+                                        <td>20/11/2023</td>
+                                        <td>1,245</td>
+                                        <td><span class="badge bg-success">Đã duyệt</span></td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary me-1">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#202</td>
+                                        <td>Hướng dẫn đọc sách hiệu quả</td>
+                                        <td>
+                                            <div>Trần Thị B</div>
+                                            <small class="text-muted">tranthib@example.com</small>
+                                        </td>
+                                        <td>15/12/2023</td>
+                                        <td>0</td>
+                                        <td><span class="badge bg-warning text-dark">Chờ duyệt</span></td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm">
+                                                <button class="btn btn-outline-success" title="Duyệt">
+                                                    <i class="bi bi-check-circle"></i>
+                                                </button>
+                                                <button class="btn btn-outline-danger" title="Từ chối">
+                                                    <i class="bi bi-x-circle"></i>
+                                                </button>
+                                                <button class="btn btn-outline-primary" title="Sửa">
+                                                    <i class="bi bi-pencil"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#203</td>
+                                        <td>Review sách: Đắc Nhân Tâm</td>
+                                        <td>
+                                            <div>Lê Văn C</div>
+                                            <small class="text-muted">levanc@example.com</small>
+                                        </td>
+                                        <td>05/01/2024</td>
+                                        <td>0</td>
+                                        <td><span class="badge bg-danger">Từ chối</span></td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-primary me-1">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
+                        <!-- Grid View for Mobile -->
+                        <div class="row g-4 d-md-none">
+                            <!-- Article Item 1 -->
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start mb-2">
+                                            <span class="badge bg-success">Đã duyệt</span>
+                                            <small class="text-muted">20/11/2023</small>
+                                        </div>
+                                        <h5 class="card-title">10 cuốn sách hay nhất năm 2023</h5>
+                                        <p class="card-text text-muted">Tổng hợp những cuốn sách đáng đọc nhất năm 2023 theo bình chọn của độc giả</p>
+                                        <div class="mb-2">
+                                            <div class="fw-semibold">Nguyễn Văn A</div>
+                                            <small class="text-muted">nguyenvana@example.com</small>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <small class="text-muted"><i class="bi bi-eye me-1"></i> 1,245 lượt xem</small>
+                                        </div>
+                                        <div class="admin-actions mt-3">
+                                            <button class="btn btn-sm btn-outline-primary me-1">
+                                                <i class="bi bi-pencil me-1"></i>Sửa
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                                <i class="bi bi-trash me-1"></i>Xóa
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Article Item 2 (Pending) -->
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start mb-2">
+                                            <span class="badge bg-warning text-dark">Chờ duyệt</span>
+                                            <small class="text-muted">15/12/2023</small>
+                                        </div>
+                                        <h5 class="card-title">Hướng dẫn đọc sách hiệu quả</h5>
+                                        <p class="card-text text-muted">Những phương pháp giúp bạn đọc sách nhanh hơn và nhớ lâu hơn</p>
+                                        <div class="mb-2">
+                                            <div class="fw-semibold">Trần Thị B</div>
+                                            <small class="text-muted">tranthib@example.com</small>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <small class="text-muted"><i class="bi bi-eye me-1"></i> 892 lượt xem</small>
+                                        </div>
+                                        <div class="admin-actions mt-3">
+                                            <button class="btn btn-sm btn-outline-success me-1">
+                                                <i class="bi bi-check-circle me-1"></i>Duyệt
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger me-1">
+                                                <i class="bi bi-x-circle me-1"></i>Từ chối
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-primary">
+                                                <i class="bi bi-pencil me-1"></i>Sửa
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Pagination -->
+                        <nav class="mt-4">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Trước</a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Tiếp</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Confirmation Modal -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Xác nhận</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Bạn có chắc chắn muốn xóa postcard này không?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-danger">Xác nhận xóa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Summernote JS -->
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./js/content.js"></script>
+    <script src="./js/postcards.js"></script>
+    <script>
+        // Khởi tạo Summernote
+        $(document).ready(function() {
+            $('#postcardEditor').summernote({
+                height: 200,
+                toolbar: [
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['font', ['strikethrough', 'superscript', 'subscript']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['insert', ['link', 'picture', 'video']],
+                    ['view', ['fullscreen', 'codeview', 'help']]
+                ]
+            });
+            
+            $('#editPostcardEditor').summernote({
+                height: 200,
+                toolbar: [
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['font', ['strikethrough', 'superscript', 'subscript']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['insert', ['link', 'picture', 'video']],
+                    ['view', ['fullscreen', 'codeview', 'help']]
+                ]
+            });
+            
+            // Xử lý upload ảnh
+            document.getElementById('postcardThumbUpload').addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                        document.getElementById('postcardThumbPreview').src = event.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+            
+            document.getElementById('editPostcardThumbUpload').addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                        document.getElementById('editPostcardThumbPreview').src = event.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+            
+            // Xử lý chọn màu
+            document.querySelectorAll('.color-option').forEach(button => {
+                button.addEventListener('click', function() {
+                    // Xóa active khỏi tất cả các nút
+                    document.querySelectorAll('.color-option').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    // Thêm active vào nút được chọn
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
