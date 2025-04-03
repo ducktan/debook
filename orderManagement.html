@@ -22,13 +22,12 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./CSS/order.css">
-    <link rel="stylesheet" href="./CSS/admin.css">
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar -->
-            <nav class="col-md-3 col-lg-2 d-md-block bg-white sidebar border-end p-3 min-vh-100">
+            <nav class="col-md-3 col-lg-2 d-md d-md-block bg-white sidebar border-end p-3 min-vh-100">
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <img src="./IMG/Logo.png" alt="logo" class="img-fluid mynav__logo">
                     <button class="btn btn-sm d-md-none" id="sidebarToggle">
@@ -85,7 +84,56 @@
             <!-- Main Content -->
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
                 <!-- Header -->
+                <div class="responsive__item mb-5 d-block d-md-none">
+                    <ul class="nav d-flex">
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center active" href="./admin.html">
+                                <i class="bi bi-speedometer2 text-primary"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center" href="./userManagement.html">
+                                <i class="bi bi-people-fill text-warning"></i>
+                                <span>Người dùng</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center" href="./authorManagement.html">
+                                <i class="bi bi-person-badge-fill text-success"></i>
+                                <span>Tác giả</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center" href="./productManagement.html">
+                                <i class="bi bi-book-half text-info"></i>
+                                <span>Sản phẩm</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center" href="./orderManagement.html">
+                                <i class="bi bi-cart-check text-danger"></i>
+                                <span>Đơn hàng</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center" href="./paymentManagement.html">
+                                <i class="bi bi-credit-card text-secondary"></i>
+                                <span>Thanh toán</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center" href="./contentManagement.html">
+                                <i class="bi bi-file-earmark-text text-dark"></i>
+                                <span>Nội dung</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
                 <div class="d-flex justify-content-between align-items-center mb-4">
+                    
+                    
                     <h2 class="fw-bold mb-0">
                         <i class="bi bi-cart-check me-2" style="color: #FBBC05;"></i>QUẢN LÝ ĐƠN HÀNG
                     </h2>
@@ -132,7 +180,7 @@
 
                 <!-- Order Summary Cards -->
                 <div class="row mb-4">
-                    <div class="col-md-2 col-6 mb-3">
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-6 mb-3">
                         <div class="card stat-card p-3 shadow-sm border-left-success">
                             <div class="card-body">
                                 <h6 class="text-muted">Tổng đơn</h6>
@@ -140,7 +188,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2 col-6 mb-3">
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-6 mb-3">
                         <div class="card stat-card p-3 shadow-sm border-left-primary">
                             <div class="card-body">
                                 <h6 class="text-muted">Chờ xác nhận</h6>
@@ -148,7 +196,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2 col-6 mb-3">
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-6 mb-3">
                         <div class="card stat-card p-3 shadow-sm border-left-secondary">
                             <div class="card-body">
                                 <h6 class="text-muted">Đã xác nhận</h6>
@@ -156,7 +204,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2 col-6 mb-3">
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-6 mb-3">
                         <div class="card stat-card p-3 shadow-sm border-left-info">
                             <div class="card-body">
                                 <h6 class="text-muted">Đang giao</h6>
@@ -164,7 +212,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2 col-6 mb-3">
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-6 mb-3">
                         <div class="card stat-card p-3 shadow-sm border-left-warning">
                             <div class="card-body">
                                 <h6 class="text-muted">Đã giao</h6>
@@ -172,7 +220,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2 col-6 mb-3">
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-6 mb-3">
                         <div class="card stat-card p-3 shadow-sm border-left-success">
                             <div class="card-body">
                                 <h6 class="text-muted">Đã hủy</h6>

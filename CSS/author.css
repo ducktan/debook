@@ -77,6 +77,12 @@
     box-shadow: 0 0 0 2px var(--primary-light);
 }
 
+.text__fixed {
+    overflow: hidden; /* Ẩn phần bị tràn */
+    word-wrap: break-word; /* Bẻ dòng khi cần thiết */
+    word-break: break-word; /* Bẻ từ khi cần */
+}
+
 /* ===== Author List ===== */
 .author-list {
     display: grid;
@@ -279,7 +285,7 @@
     overflow-y: auto;
     background: white;
     box-shadow: 1px 0 10px rgba(0, 0, 0, 0.05);
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 500;
 }
 

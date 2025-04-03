@@ -22,13 +22,12 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./CSS/payment.css">
-    <link rel="stylesheet" href="./CSS/admin.css">
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar -->
-            <nav class="col-md-3 col-lg-2 d-md-block bg-white sidebar border-end p-3 min-vh-100">
+            <nav class="col-md-3 col-lg-2 d-md-block d-none bg-white sidebar border-end p-3 min-vh-100">
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <img src="./IMG/Logo.png" alt="logo" class="img-fluid mynav__logo">
                     <button class="btn btn-sm d-md-none" id="sidebarToggle">
@@ -84,17 +83,64 @@
 
             <!-- Main Content -->
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+                <div class="responsive__item mb-5 d-block d-md-none">
+                    <ul class="nav d-flex">
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center active" href="./admin.html">
+                                <i class="bi bi-speedometer2 text-primary"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center" href="./userManagement.html">
+                                <i class="bi bi-people-fill text-warning"></i>
+                                <span>Người dùng</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center" href="./authorManagement.html">
+                                <i class="bi bi-person-badge-fill text-success"></i>
+                                <span>Tác giả</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center" href="./productManagement.html">
+                                <i class="bi bi-book-half text-info"></i>
+                                <span>Sản phẩm</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center" href="./orderManagement.html">
+                                <i class="bi bi-cart-check text-danger"></i>
+                                <span>Đơn hàng</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center" href="./paymentManagement.html">
+                                <i class="bi bi-credit-card text-secondary"></i>
+                                <span>Thanh toán</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center" href="./contentManagement.html">
+                                <i class="bi bi-file-earmark-text text-dark"></i>
+                                <span>Nội dung</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
                 <!-- Header -->
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h2 class="fw-bold mb-0">
+                <div class="header__fix mb-4">
+                    <h2 class="fw-bold">
                         <i class="bi bi-credit-card me-2" style="color: #FBBC05;"></i>QUẢN LÝ THANH TOÁN
                     </h2>
                     <div>
-                        <button class="btn btn-outline-success me-2">
+                        <button class="btn btn-outline-success me-2 fix__button">
                             <i class="bi bi-download me-2"></i>Xuất Excel
                         </button>
                         <div class="btn-group">
-                            <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                            <button class="btn btn-primary dropdown-toggle fix__button" data-bs-toggle="dropdown">
                                 <i class="bi bi-plus-lg me-2"></i>Thao tác
                             </button>
                             <ul class="dropdown-menu">

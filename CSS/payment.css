@@ -3,6 +3,10 @@
     border-radius: 10px;
     border-left: 4px solid;
     transition: all 0.3s;
+    overflow: hidden; /* Ẩn phần bị tràn */
+    word-wrap: break-word; /* Bẻ dòng khi cần thiết */
+    word-break: break-word; /* Bẻ từ khi cần */
+    width: 70vw;;
 }
 
 .summary-card:hover {
@@ -54,20 +58,14 @@
     top: 50%;
     transform: translateY(-50%);
 }
-
-/* Responsive */
-@media (max-width: 768px) {
-    .payment-table th:nth-child(4),
-    .payment-table td:nth-child(4),
-    .payment-table th:nth-child(5),
-    .payment-table td:nth-child(5) {
-        display: none;
-    }
-    
-    .summary-card .fs-1 {
-        font-size: 1.5rem !important;
-    }
+.header__fix {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
+
+
 /* ===== Sidebar ===== */
 .sidebar {
     position: sticky;
@@ -76,7 +74,7 @@
     overflow-y: auto;
     background: white;
     box-shadow: 1px 0 10px rgba(0, 0, 0, 0.05);
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 500;
 }
 
@@ -109,4 +107,28 @@
 
 .nav-item .nav-link.active i {
     transform: scale(1.1); /* Phóng to icon nhẹ */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .payment-table th:nth-child(4),
+    .payment-table td:nth-child(4),
+    .payment-table th:nth-child(5),
+    .payment-table td:nth-child(5) {
+        display: none;
+    }
+    
+    .summary-card .fs-1 {
+        font-size: 1.5rem !important;
+    }
+}
+
+@media screen and (max-width: 991.98px) {
+    .header__fix h2{
+       margin-bottom: 1rem;
+    }
+    .header__fix {
+        display: block;
+    }
+    
 }
