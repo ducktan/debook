@@ -1,0 +1,366 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 16px;
+}
+
+/* Tiêu đề */
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+
+/* Main Content */
+.main-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.thumbnail-grid img {
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.rating i {
+    margin-right: 0.25rem;
+}
+
+.rating span {
+    margin-left: 0.5rem;
+}
+
+.price-section {
+    margin-bottom: 1.5rem;
+}
+
+.format-select .btn-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* CSS cho phần số lượng */
+.quantity-selector .input-group {
+    border: 1px solid #317923; /* Thêm viền màu xanh lá */
+    border-radius: 5px; /* Bo góc */
+    width: auto;
+    overflow: hidden; /* Đảm bảo border-radius hoạt động với các phần tử bên trong */
+}
+
+.quantity-selector .input-group .form-control {
+    border-left: 1px solid #317923; /* Viền giữa ô input và nút - */
+    border-right: 1px solid #317923; /* Viền giữa ô input và nút + */
+    border-top: none;
+    border-bottom: none;
+    text-align: center;
+}
+
+.quantity-selector .input-group button {
+    border: none;
+    background-color: white;
+    padding: 0.375rem 0.75rem;
+}
+
+.quantity-selector .input-group button:hover {
+    background-color: #f8f9fa;
+}
+/* Ghi đè Bootstrap - luôn hiển thị viền */
+.quantity-selector .input-group {
+    border: 1px solid #317923 !important; /* Viền bao ngoài */
+    border-radius: 5px;
+    width: auto;
+}
+
+.quantity-selector .form-control {
+    border-left: 1px solid #317923 !important; /* Viền trái ô input */
+    border-right: 1px solid #317923 !important; /* Viền phải ô input */
+    border-top: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important; /* Loại bỏ shadow khi focus */
+}
+
+.quantity-selector .btn {
+    border: none !important;
+    background-color: transparent !important;
+}
+
+.quantity-selector .btn-outline-success {
+    border-radius: 100px; /* Tăng giá trị theo ý muốn (vd: 12px, 1rem) */
+}
+
+
+/* Tùy chọn: Giữ viền đậm hơn khi focus */
+.quantity-selector .form-control:focus {
+    border-color: #317923 !important;
+    box-shadow: 0 0 0 0.25rem rgba(49, 121, 35, 0.25) !important;
+}
+.action-buttons .btn {
+    width: auto;
+    padding: 0.75rem 1.5rem;
+}
+.book-info {
+    display: flex;
+    flex-direction: column; 
+    gap: 0.5rem; 
+}
+.book-summary {
+    margin-top: 1.5rem;
+}
+
+.book-summary .summary-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.read-more {
+    color: #317923;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Phần đánh giá */
+.reviews-section {
+    padding: 2rem 0;
+    border-top: 1px solid #eee;
+}
+
+.average-rating {
+    font-weight: bold;
+}
+.rating-bars .rating-bar {
+    display: flex;
+    align-items: center;
+}
+
+.rating-bars .progress {
+    flex-grow: 1;
+    background-color: #f0f0f0;
+}
+
+.review-item {
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.review-header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+}
+
+.review-content h5 {
+    font-weight: 600;
+    color: #333;
+}
+
+.review-images img {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.review-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Rating input */
+.rating-input {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.rating-input input {
+    display: none;
+}
+
+.rating-input label {
+    color: #ddd;
+    font-size: 2rem;
+    padding: 0 0.2rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.rating-input input:checked ~ label,
+.rating-input input:hover ~ label,
+.rating-input label:hover,
+.rating-input label:hover ~ label {
+    color: #ffc107;
+}
+
+.rating-input input:checked + label {
+    color: #ffc107;
+}
+
+/* Upload box */
+.upload-box {
+    background-color: #f8f9fa;
+    transition: all 0.3s;
+}
+
+.upload-box:hover {
+    background-color: #e9ecef;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .review-summary {
+        flex-direction: column;
+    }
+    
+    .rating-bars {
+        margin-top: 1.5rem;
+    }
+    
+    .review-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .review-actions {
+        margin-top: 1rem;
+    }
+    
+    .review-footer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+/* Cart Items Alignment */
+.cart-item .row {
+    align-items: center;
+}
+
+.cart-item .product-info {
+    align-items: center;
+}
+
+.cart-item .product-img {
+    width: 60px;
+    height: 80px;
+    object-fit: contain;
+    border: 1px solid #f1f1f1;
+    padding: 5px;
+    background: white;
+    border-radius: 4px;
+}
+
+.cart-item .product-details {
+    flex: 1;
+}
+
+.cart-item .product-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.cart-item .product-author,
+.cart-item .product-format {
+    font-size: 0.8rem;
+    margin-bottom: 0.1rem;
+}
+
+.cart-item .product-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-item .product-quantity .input-group {
+    max-width: 120px;
+    margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .cart-item .col-md-2,
+    .cart-item .col-md-1 {
+        margin-top: 10px;
+    }
+    
+    .cart-item .product-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .cart-item .product-img {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cart-item .row > div {
+        margin-top: 10px;
+    }
+    
+    .cart-item .product-price,
+    .cart-item .product-quantity,
+    .cart-item .product-total {
+        text-align: left !important;
+        justify-content: flex-start;
+    }
+    
+    .cart-item .product-quantity .input-group {
+        margin: 0;
+    }
+}
+/* Ô số lượng với viền xanh lá */
+.product-quantity .input-group {
+    border: 1px solid #317923;
+    border-radius: 4px;
+    overflow: hidden;
+    max-width: 120px;
+}
+
+.product-quantity .form-control {
+    border-left: 1px solid #317923 !important;
+    border-right: 1px solid #317923 !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    text-align: center;
+    padding: 0.25rem;
+    color: #317923;
+    font-weight: 500;
+}
+
+.product-quantity .btn-outline-secondary {
+    border: none !important;
+    color: #317923;
+    background-color: #f8f9fa;
+    padding: 0.25rem 0.5rem;
+}
+
+.product-quantity .btn-outline-secondary:hover {
+    background-color: #e9f5e9;
+}
+
+/* Thêm hiệu ứng khi focus vào ô input */
+.product-quantity .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(49, 121, 35, 0.25);
+    border-color: #317923 !important;
+    outline: none;
+}

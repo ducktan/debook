@@ -1,0 +1,127 @@
+/* Product Image */
+.product-img-wrapper {
+    width: 60px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    position: relative;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.1);
+}
+
+/* Product Row */
+.product-row {
+    transition: all 0.3s ease;
+}
+
+.product-row:hover {
+    background-color: rgba(66, 133, 244, 0.03) !important;
+    transform: translateY(-2px);
+}
+
+/* Progress Bar */
+.progress {
+    background-color: #f1f3f4;
+    margin-bottom: 4px;
+}
+
+/* Action Buttons */
+.btn-action {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-edit {
+    background: rgba(251, 188, 5, 0.1);
+    color: #FBBC05;
+    border: none;
+}
+
+.btn-delete {
+    background: rgba(234, 67, 53, 0.1);
+    color: #EA4335;
+    border: none;
+}
+
+.btn-view {
+    background: rgba(66, 133, 244, 0.1);
+    color: #4285F4;
+    border: none;
+}
+
+.btn-action:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .product-img-wrapper {
+        width: 50px;
+        height: 70px;
+    }
+    
+    .product-table th:nth-child(3),
+    .product-table td:nth-child(3),
+    .product-table th:nth-child(5),
+    .product-table td:nth-child(5) {
+        display: none;
+    }
+}
+/* ===== Sidebar ===== */
+.sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    background: white;
+    box-shadow: 1px 0 10px rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav-link {
+    transition: all 0.01s ease-in-out;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    padding: 10px 15px !important;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: rgba(66, 133, 244, 0.1);
+    color: blue;
+    font-weight: 700;
+}
+
+.nav-link i {
+    width: 24px;
+    text-align: center;
+    margin-right: 12px;
+    font-size: 1.1rem;
+}
+.nav-item .nav-link.active {
+    border-left: 4px solid #0d6efd;
+    background-color: rgba(13, 110, 253, 0.1);
+    color: blue ;
+    font-weight: 700;
+    margin-left: -4px; /* Căn chỉnh do border */
+}
+
+.nav-item .nav-link.active i {
+    transform: scale(1.1); /* Phóng to icon nhẹ */
+}

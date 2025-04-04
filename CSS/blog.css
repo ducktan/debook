@@ -1,0 +1,138 @@
+/* Reset cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 16px;
+}
+
+/* Container */
+.container {
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+
+/* Blog Section */
+.blog-section {
+    padding: 20px 0;
+}
+
+.blog-section .card {
+    border: none;
+    transition: transform 0.3s;
+    box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.3);
+}
+
+.blog-section .card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-section .card-img-top {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-left: 1rem;
+    margin-top: 20%;
+}
+
+.blog-section .btn-primary {
+    background-color: #317923;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.blog-section .btn-primary:hover {
+    background-color: #265f1a;
+}
+
+.blog-section .card-body {
+    padding: 1.5rem;
+}
+
+.blog-section .card-title a{
+    margin-bottom: 1rem;
+    
+}
+a{
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.blog-section .card-text {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-section .card-text strong {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.blog-post.hidden {
+    display: none;
+}
+
+.col-md-4 {
+    margin-bottom: 1rem;
+}
+
+/* Review Form */
+#review-form {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#review-form .form-label {
+    font-weight: bold;
+    color: #317923;
+    margin-bottom: 0.25rem;
+}
+
+#review-form .form-control {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+}
+
+#review-form .btn-primary {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Post Meta */
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.rating i {
+    color: gold;
+    margin-right: 2px;
+}
+
+.mymodal .modal-title {
+    color: #317923;
+    font-weight: 500;
+}
+
+
+
+@media screen and (max-width: 767.98px) {
+    .blog-section .card-img-top {
+        height: 200px;
+    }
+    .blog-section .card-img-top {
+        margin: 0;
+        border-radius: 0;
+        height: 200px;
+    }
+    
+}
+
