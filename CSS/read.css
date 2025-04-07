@@ -511,6 +511,7 @@ header {
     align-items: center;
     margin-bottom: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 1, 0.3);
+    margin-top:  2rem;
 }
 
 .episode-image {
