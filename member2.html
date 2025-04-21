@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Payment</title>
+    <link rel="stylesheet" href="/CSS/member_.css">
+</head>
+<body>
+    <div class="payment-container">
+        <header>
+
+            <h1>Thanh toán</h1>
+            <img src="/IMG/Logo.png" width="20%">
+        </header>
+
+        <div class="subscription-info">
+            <h2>DeBook 6 tháng</h2>
+            <p>183 ngày nghe/đọc sách</p>
+            <p class="price">Giá: 179.0000đ</p>
+            <p>Bắt đầu từ  <span id="startDate"></span></p>
+            <p>Đến hết ngày  <span id="endDate"></span></p>
+            <p class="cancel-info"><i>Hủy bất cứ lúc nào trên mạng. <a href="#">Có áp dụng các điều khoản</a></i></p>
+        </div>
+
+        <div class="payment-methods">
+            <h3>Phương thức thanh toán</h3>
+            <label>
+                <input type="radio" name="payment-method" value="momo" class="payment-radio">
+                Ví MoMo
+                <img src="/IMG/unnamed.png" width="20" alt="MOMO" >
+                <br>
+                <img id="momo-logo" src="/IMG/IMG_5630.jpg" width="200" alt="MOMO" style="display: block;">
+            </label>
+            <label>
+                <input type="radio" name="payment-method" value="card" class="payment-radio">
+                Ngân hàng
+                <img src="./IMG/Vietcombank_logo_fixed.svg.png" width="40" alt="MOMO" >
+                <br>
+                <img id="bank-logo" src="/IMG/IMG_5633.jpg" width="200" alt="NGÂN HÀNG" style="display: none;">
+            </label>
+
+        </div>
+
+        <footer>
+            
+            <a href="/index.html" class="pay-button">Đã thanh toán</a>
+        </footer>
+    </div>
+
+
+    <script>
+        // lấy ngày
+
+        function formatDate(date) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return date.toLocaleDateString('vi-VN', options);
+        }
+
+        function addDaysToDate(date, daysToAdd) {
+            const newDate = new Date(date);
+            newDate.setDate(date.getDate() + daysToAdd);
+            return newDate;
+        }
+
+        const startDateElement = document.getElementById('startDate');
+        const endDateElement = document.getElementById('endDate');
+        const today = new Date();
+        const daysToAdd = 179; // Số ngày cần cộng
+
+        const endDate = addDaysToDate(today, daysToAdd);
+
+        startDateElement.textContent = formatDate(today);
+        endDateElement.textContent = formatDate(endDate);
+
+
+
+        // Lắng nghe sự kiện khi người dùng chọn phương thức thanh toán
+        document.querySelectorAll('.payment-radio').forEach(radio => {
+            radio.addEventListener('change', function() {
+                // Ẩn tất cả các hình ảnh logo
+                document.getElementById('momo-logo').style.display = 'none';
+                document.getElementById('bank-logo').style.display = 'none';
+
+                // Kiểm tra xem radio nào được chọn và hiển thị hình ảnh tương ứng
+                const selectedValue = this.value;
+
+                if (selectedValue === 'card') {
+                    document.getElementById('bank-logo').style.display = 'inline-block';
+                } else if (selectedValue === 'momo') {
+                    document.getElementById('momo-logo').style.display = 'inline-block';
+                }
+            });
+        });
+
+        // Ẩn tất cả logo khi trang tải nếu không có radio nào được chọn mặc định
+        document.addEventListener('DOMContentLoaded', function() {
+            const defaultChecked = document.querySelector('input[name="payment-method"]:checked');
+            if (!defaultChecked) {
+                document.getElementById('momo-logo').style.display = 'none';
+                document.getElementById('bank-logo').style.display = 'none';
+            } else if (defaultChecked.value === 'momo') {
+                document.getElementById('momo-logo').style.display = 'inline-block';
+                document.getElementById('bank-logo').style.display = 'none';
+            } else if (defaultChecked.value === 'card') {
+                document.getElementById('bank-logo').style.display = 'inline-block';
+                document.getElementById('momo-logo').style.display = 'none';
+            }
+        });
+
+    </script>
+</body>
+</html>

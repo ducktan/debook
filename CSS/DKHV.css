@@ -316,3 +316,81 @@ header {
     transform: scale(1.05); /* Phóng to nhẹ khi hover */
     text-decoration: none;
 }
+<<<<<<< Updated upstream:CSS/DKHV.css
+=======
+
+.myrow {
+    padding-left: 2rem;
+}
+@media screen and (max-width: 374px) {
+    .DKHV p {
+        display: none;
+    }
+    
+}
+
+
+
+/* form*/
+
+/* Modal form đăng ký */
+.modal {
+     /* Ban đầu modal ẩn */
+    position: fixed;
+    z-index: 1; /* Đảm bảo modal ở trên cùng */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);  /* Nền mờ */
+    overflow: auto; /* Nếu modal nội dung quá dài thì có thể cuộn */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 60%; /* Chiều rộng của modal */
+    max-width: 600px;
+    text-align: center;
+}
+
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style cho form đăng ký */
+#registerForm input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#registerForm button {
+    padding: 0.8rem 2rem;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#registerForm button:hover {
+    background-color: #0056b3;
+}
+>>>>>>> Stashed changes:CSS/member.css

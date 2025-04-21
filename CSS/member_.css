@@ -1,0 +1,105 @@
+/* Đặt kiểu toàn cục */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+   
+}
+
+.payment-container {
+    width: 40%;
+    margin: 50px auto;
+    background-color:#b1ba78bc; /* màu nền của gói*/
+  
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 28px;
+    color: #10794f;
+}
+
+.subscription-info {
+    margin-bottom: 20px;
+}
+
+.subscription-info h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.subscription-info .price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.subscription-info .cancel-info {
+    font-size: 14px;
+    color: #888;
+}
+
+.subscription-info .cancel-info a {
+    color: #1DB954;
+    text-decoration: none;
+}
+
+/* Các phương thức thanh toán */
+.payment-methods {
+    margin-bottom: 30px;
+}
+
+.payment-methods h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.payment-methods label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.card-icons {
+    margin-top: 10px;
+}
+
+.card-icons img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+/* Nút thanh toán */
+footer {
+    text-align: center;
+}
+
+footer .pay-button {
+    background-color:#10794f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+footer .pay-button:hover {
+    background-color: #669e79;
+    text-decoration: none;
+}
+
+
+.note
+{
+    color:#638770;
+}
+

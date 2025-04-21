@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán qua SMS</title>
+    <link rel="stylesheet" href="/CSS/member_.css">
+
+   
+</head>
+<body>
+    
+    <div class="payment-container">
+        <header>
+
+            <h1>Thanh toán</h1>
+            <img src="/IMG/Logo.png" width="20%">
+        </header>
+        <div class="subscription-info">
+            <h2>DeBook 30 ngày</h2>
+            <p>30 ngày nghe/đọc sách</p>
+            <p class="price">Giá: 30.000đ</p>
+            <p>Bắt đầu từ  <span id="startDate"></span></p>
+            <p>Đến hết ngày  <span id="endDate"></span></p>
+            <p class="cancel-info"><i>Hủy bất cứ lúc nào. <a href="#">Có áp dụng các điều khoản</a></i></p>
+        </div>
+
+        <div class="instruction">
+            <p>Để hoàn tất thanh toán, vui lòng soạn tin nhắn theo cú pháp sau và gửi đến tổng đài <span style="font-weight: bold;">XXXX</span>:</p>
+            <p><strong>Cú pháp: <span class="random-code" id="paymentCode"></span></strong></p>
+           
+        </div>
+
+        <p class="note"><i>Lưu ý: Cước phí tin nhắn có thể được áp dụng tùy theo nhà mạng.</i></p>
+        <p class="note"><i>Mã thanh toán này chỉ có hiệu lực trong một thời gian ngắn.</i></p>
+        <footer>
+        <a href="/index.html" class="pay-button">Đã thanh toán</a>
+        </footer>
+    </div>
+
+    <script>
+        function generateRandomCode(length) {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let result = '';
+            const charactersLength = characters.length;
+            for (let i = 0; i < length; i++) {
+                result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            }
+            return result;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const paymentCodeElement = document.getElementById('paymentCode');
+            const randomCode = "DB " + generateRandomCode(8); // Tạo mã ngẫu nhiên 8 ký tự
+            paymentCodeElement.textContent = randomCode;
+
+
+        });
+
+        // lấy ngày
+
+        function formatDate(date) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return date.toLocaleDateString('vi-VN', options);
+        }
+
+        function addDaysToDate(date, daysToAdd) {
+            const newDate = new Date(date);
+            newDate.setDate(date.getDate() + daysToAdd);
+            return newDate;
+        }
+
+        const startDateElement = document.getElementById('startDate');
+        const endDateElement = document.getElementById('endDate');
+        const today = new Date();
+        const daysToAdd = 30; // Số ngày cần cộng
+
+        const endDate = addDaysToDate(today, daysToAdd);
+
+        startDateElement.textContent = formatDate(today);
+        endDateElement.textContent = formatDate(endDate);
+
+
+
+    </script>
+</body>
+</html>
