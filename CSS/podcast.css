@@ -477,6 +477,11 @@ header {
     align-items: center;
 }
 
+      /*  */
+      
+    
+  
+
 .play-btn {
     background-color: #00C853;
     color: white;
@@ -523,7 +528,7 @@ header {
 
 
 /* slider*/
-.container {
+.p-container {
     display: flex;
     /*align-items: center;*/
     justify-content: space-between;
@@ -591,7 +596,9 @@ button {
     display: flex;
     align-items: center; /* Căn giữa theo chiều dọc */
     gap: 10px; /* Khoảng cách giữa tiêu đề và dropdown */
+    position: relative; /* Để có thể sử dụng absolute cho dropdown */
 }
+/*
 .styled-select {
     font-size: 16px;
     padding: 12px 10px;
@@ -605,7 +612,7 @@ button {
     outline: none;
     transition: all 0.3s ease;
     appearance: none;
-   /* text-align: ;*/
+   
 }
 
 .styled-select:hover {
@@ -616,6 +623,13 @@ button {
 .styled-select:focus {
     border: 2px solid #66BB6A;
     box-shadow: 0px 0px 15px rgba(102, 187, 106, 0.8);
+}
+*/
+
+.styled-select {
+    font-size: 1rem;
+    padding: 5px 5px;
+    border-radius: 10px;
 }
 
 .select-wrapper {
@@ -663,7 +677,7 @@ button {
 }
 .podcast-section h2 {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 2rem;
 }
 .podcast-list {
     display: flex;
@@ -685,14 +699,15 @@ button {
     width: 100%;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
+    margin-bottom: 1rem;
 
 }
 .podcast-item img:hover {
     transform: scale(1.05);
 }
 .podcast-item p {
-    margin-top: 5px;
-    font-size: 14px;
+    font-size: 1.15rem;
+    font-weight: 500;
 }
 .podcast-item .description {
     position: absolute;
@@ -717,7 +732,7 @@ button {
 
 .label {
 
-    background-color: #4a4a4a; /* Màu xám đậm */
+    background-image: linear-gradient(to right, #317923, #FDCE26); 
     color: white;
     font-weight: bold;
     font-size: 14px;
@@ -725,6 +740,18 @@ button {
     border-radius: 16px; /* Bo góc giống ảnh */
     text-transform: uppercase;
     position: absolute;
-    top: -10px; /* Điều chỉnh vị trí lên trên container */
-    left: 10px;
+    bottom: -10px;
+    
+}
+
+@media screen and (max-width: 460px) {
+   .p-container.fixCode {
+        display: block;
+   } 
+   .podcast-content {
+    max-width: 100%;
+   }
+   .label {
+    bottom: -1rem;
+   }
 }
